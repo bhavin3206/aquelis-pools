@@ -6,19 +6,19 @@ export default function Team() {
     {
       name: "Anuradha Selvi",
       role: "Chief Engineer, Aquelis.",
-      image: "/images/team_anuradha_centered.jpg",
+      image: "/images/team_anuradha_centered.webp",
       featured: true,
     },
     {
       name: "Daniel Carter",
       role: "Senior Pool Architect",
-      image: "/images/team_daniel_centered.jpg",
+      image: "/images/team_daniel_centered.webp",
       featured: false,
     },
     {
       name: "Miller Jones",
       role: "Lead Maintenance Specialist",
-      image: "/images/team_miller_centered.jpg",
+      image: "/images/team_miller_centered.webp",
       featured: false,
     },
   ];

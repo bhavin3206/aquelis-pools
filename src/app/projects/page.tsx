@@ -20,7 +20,7 @@ export default function ProjectsPage() {
       location: "Hernes, New Jersey, USA",
       dimensions: "40' x 20' In-ground",
       specs: "Saltwater • Automated Cover • Bluestone Coping",
-      image: "/images/21_designs__featured_pools__rectangle_10.jpg",
+      image: "/images/21_designs__featured_pools__rectangle_10.webp",
     },
     {
       title: "Maldives Resort Infinity Horizon",
@@ -29,7 +29,7 @@ export default function ProjectsPage() {
       location: "Udagada Resort, Maldives",
       dimensions: "65' x 30' Vanishing Edge",
       specs: "Oceanfront Edge • Mosaic Glass Tiles • Perimeter Overflow",
-      image: "/images/29_banner_image__rectangle_86.jpg",
+      image: "/images/29_banner_image__rectangle_86.webp",
     },
     {
       title: "Modern Courtyard Lap Pool",
@@ -38,7 +38,7 @@ export default function ProjectsPage() {
       location: "Princeton, New Jersey, USA",
       dimensions: "50' x 12' Dual Lane",
       specs: "Endless Swim Jets • Quartz Plaster • Integrated Spa",
-      image: "/images/07_our_professional_pool_services__residential_pool_services__rectangle_7.jpg",
+      image: "/images/07_our_professional_pool_services__residential_pool_services__rectangle_7.webp",
     },
     {
       title: "Luxury Rooftop Hospitality Deck",
@@ -47,7 +47,7 @@ export default function ProjectsPage() {
       location: "Cape May, New Jersey, USA",
       dimensions: "45' x 24' Elevated",
       specs: "Stainless Steel Frame • ADA Accessible • Sunken Lounge",
-      image: "/images/08_our_professional_pool_services__commercial_pool_services__rectangle_10.jpg",
+      image: "/images/08_our_professional_pool_services__commercial_pool_services__rectangle_10.webp",
     },
     {
       title: "Indoor Heated Wellness Premise",
@@ -56,7 +56,7 @@ export default function ProjectsPage() {
       location: "Alpine, New Jersey, USA",
       dimensions: "36' x 18' Climate Controlled",
       specs: "Dehumidification HVAC • Travertine Decking • Hydrotherapy",
-      image: "/images/34_benefits_of_an_indoor_swimming_pool_premise__group_25__rectangle_90.jpg",
+      image: "/images/34_benefits_of_an_indoor_swimming_pool_premise__group_25__rectangle_90.webp",
     },
     {
       title: "Custom Waterfall Stone Sanctuary",
@@ -65,7 +65,7 @@ export default function ProjectsPage() {
       location: "Rumson, New Jersey, USA",
       dimensions: "42' x 22' Lagoon Style",
       specs: "Natural Fieldstone • Fire Bowl Accents • Baja Tanning Shelf",
-      image: "/images/14_why_choose_us__image__rectangle_7.jpg",
+      image: "/images/14_why_choose_us__image__rectangle_7.webp",
     },
   ];
 

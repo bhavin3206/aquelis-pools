@@ -27,7 +27,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${archivo.variable} ${publicSans.variable}`}>
+    <html lang="en" data-scroll-behavior="smooth" className={`${archivo.variable} ${publicSans.variable}`}>
       <body className="antialiased font-sans bg-[#F4F4F5] text-[#0F1011]">
         {children}
       </body>

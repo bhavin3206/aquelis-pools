@@ -93,7 +93,7 @@ export default function ContactPage() {
                 style={{ position: "relative" }}
               >
                 <Image
-                  src="/images/27_please_contact_us_today__map__rectangle_10.jpg"
+                  src="/images/27_please_contact_us_today__map__rectangle_10.webp"
                   alt="Area Map Location"
                   fill
                   sizes="(max-width: 1024px) 100vw, 42vw"

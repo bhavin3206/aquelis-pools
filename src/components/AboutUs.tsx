@@ -15,7 +15,7 @@ export default function AboutUs() {
                 style={{ position: "relative" }}
               >
                 <Image
-                  src="/images/02_about_us__rectangle_7.jpg"
+                  src="/images/02_about_us__rectangle_7.webp"
                   alt="Pool technician maintaining swimming pool"
                   fill
                   sizes="(max-width: 1024px) 100vw, 42vw"

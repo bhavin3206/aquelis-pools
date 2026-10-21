@@ -28,7 +28,7 @@ export default function WhyChooseUs() {
             style={{ position: "relative" }}
           >
             <Image
-              src="/images/14_why_choose_us__image__rectangle_7.jpg"
+              src="/images/14_why_choose_us__image__rectangle_7.webp"
               alt="Panoramic luxury swimming pool"
               fill
               sizes="100vw"
@@ -73,7 +73,7 @@ export default function WhyChooseUs() {
                 style={{ position: "relative" }}
               >
                 <Image
-                  src="/images/15_why_choose_us__image__rectangle_10.jpg"
+                  src="/images/15_why_choose_us__image__rectangle_10.webp"
                   alt="Pool specialist testing water quality"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"

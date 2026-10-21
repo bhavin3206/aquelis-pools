@@ -79,7 +79,7 @@ export default function Hero() {
             style={{ position: "relative" }}
           >
             <Image
-              src="/images/29_banner_image__rectangle_86.jpg"
+              src="/images/29_banner_image__rectangle_86.webp"
               alt="Udagada Resort, Maldives"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
@@ -100,7 +100,7 @@ export default function Hero() {
               style={{ position: "relative" }}
             >
               <Image
-                src="/images/31_banner_image__mask_group__image_54.jpg"
+                src="/images/31_banner_image__mask_group__image_54.webp"
                 alt="Swimmer in crystal clear water"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
@@ -115,7 +115,7 @@ export default function Hero() {
                 style={{ position: "absolute" }}
               >
                 <Image
-                  src="/images/30_banner_image__mask_group__image_52.jpg"
+                  src="/images/30_banner_image__mask_group__image_52.webp"
                   alt="Clear pool water"
                   fill
                   sizes="128px"

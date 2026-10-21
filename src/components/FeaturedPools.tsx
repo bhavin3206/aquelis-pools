@@ -50,25 +50,25 @@ export default function FeaturedPools() {
       title: "New Residential Pool Construction.",
       price: "$8,901.00",
       location: "Hernes, New Jersey, USA",
-      image: "/images/21_designs__featured_pools__rectangle_10.jpg",
+      image: "/images/21_designs__featured_pools__rectangle_10.webp",
     },
     Residential: {
       title: "Modern Backyard Infinity Sanctuary.",
       price: "$12,450.00",
       location: "Princeton, New Jersey, USA",
-      image: "/images/07_our_professional_pool_services__residential_pool_services__rectangle_7.jpg",
+      image: "/images/07_our_professional_pool_services__residential_pool_services__rectangle_7.webp",
     },
     Construction: {
       title: "Custom Reinforced Inground Pool.",
       price: "$15,800.00",
       location: "Short Hills, New Jersey, USA",
-      image: "/images/14_why_choose_us__image__rectangle_7.jpg",
+      image: "/images/14_why_choose_us__image__rectangle_7.webp",
     },
     Commercial: {
       title: "Luxury Hotel Rooftop Oasis.",
       price: "$28,500.00",
       location: "Cape May, New Jersey, USA",
-      image: "/images/08_our_professional_pool_services__commercial_pool_services__rectangle_10.jpg",
+      image: "/images/08_our_professional_pool_services__commercial_pool_services__rectangle_10.webp",
     },
   };
 

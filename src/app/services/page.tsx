@@ -18,42 +18,42 @@ export default function ServicesPage() {
       title: "New Pool Construction",
       tag: "Custom Builds",
       desc: "Turnkey architectural construction from excavation to shotcrete reinforcement, custom coping, and premium plaster finishes.",
-      image: "/images/09_our_professional_pool_services__all_our_services__card_01__rectangle_11.jpg",
+      image: "/images/09_our_professional_pool_services__all_our_services__card_01__rectangle_11.webp",
       points: ["Full 3D CAD visualization", "Soil testing & engineered permits", "Lifetime structural shell warranty"],
     },
     {
       title: "Weekly Valet & Maintenance",
       tag: "Routine Care",
       desc: "White-glove weekly service ensuring crystal-clear, safe water without chlorine odor or eye irritation.",
-      image: "/images/11_our_professional_pool_services__all_our_services__card_3__rectangle_11.jpg",
+      image: "/images/11_our_professional_pool_services__all_our_services__card_3__rectangle_11.webp",
       points: ["Multi-point digital water testing", "Skimming, vacuuming & tile brushing", "Filter backwashing & basket clears"],
     },
     {
       title: "Equipment & Automation Install",
       tag: "Smart Systems",
       desc: "Upgrade to whisper-quiet variable-speed pumps, saltwater chlorinators, and smartphone-controlled automation.",
-      image: "/images/12_our_professional_pool_services__all_our_services__card_4__rectangle_11.jpg",
+      image: "/images/12_our_professional_pool_services__all_our_services__card_4__rectangle_11.webp",
       points: ["Pentair & Hayward certified installer", "Up to 70% energy cost reduction", "Smartphone app water temperature control"],
     },
     {
       title: "Pool Renovation & Resurfacing",
       tag: "Restoration",
       desc: "Transform dated pools into contemporary paradises with French coping, glass mosaics, and aggregate plaster.",
-      image: "/images/10_our_professional_pool_services__all_our_services__card_2__rectangle_11.jpg",
+      image: "/images/10_our_professional_pool_services__all_our_services__card_2__rectangle_11.webp",
       points: ["Pebble-Tec & diamond plastering", "Modern waterline mosaic tile", "LED underwater multi-color lighting"],
     },
     {
       title: "Commercial Aquatic Facilities",
       tag: "Commercial Grade",
       desc: "Comprehensive compliance and management for hotels, fitness centers, community pools, and resorts.",
-      image: "/images/08_our_professional_pool_services__commercial_pool_services__rectangle_10.jpg",
+      image: "/images/08_our_professional_pool_services__commercial_pool_services__rectangle_10.webp",
       points: ["Daily health code documentation", "Certified Pool Operator (CPO) staff", "24/7 priority emergency dispatch"],
     },
     {
       title: "Leak Detection & Repair",
       tag: "Diagnostic",
       desc: "Non-invasive electronic acoustic leak detection and pressure testing to pinpoint hidden subterranean leaks.",
-      image: "/images/15_why_choose_us__image__rectangle_10.jpg",
+      image: "/images/15_why_choose_us__image__rectangle_10.webp",
       points: ["Sonar & dye leak isolation", "Zero destruction diagnostic", "Underground plumbing trenchless repairs"],
     },
   ];
@@ -101,7 +101,7 @@ export default function ServicesPage() {
                   style={{ position: "relative" }}
                 >
                   <Image
-                    src="/images/07_our_professional_pool_services__residential_pool_services__rectangle_7.jpg"
+                    src="/images/07_our_professional_pool_services__residential_pool_services__rectangle_7.webp"
                     alt="Residential Pools"
                     fill
                     sizes="(max-width: 1024px) 100vw, 50vw"
@@ -139,7 +139,7 @@ export default function ServicesPage() {
                   style={{ position: "relative" }}
                 >
                   <Image
-                    src="/images/08_our_professional_pool_services__commercial_pool_services__rectangle_10.jpg"
+                    src="/images/08_our_professional_pool_services__commercial_pool_services__rectangle_10.webp"
                     alt="Commercial Pools"
                     fill
                     sizes="(max-width: 1024px) 100vw, 50vw"

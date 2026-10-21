@@ -5,23 +5,23 @@ export default function Services() {
   const serviceCards = [
     {
       title: "Building New Pools.",
-      image: "/images/09_our_professional_pool_services__all_our_services__card_01__rectangle_11.jpg",
+      image: "/images/09_our_professional_pool_services__all_our_services__card_01__rectangle_11.webp",
     },
     {
       title: "Pool Repair",
-      image: "/images/10_our_professional_pool_services__all_our_services__card_2__rectangle_11.jpg",
+      image: "/images/10_our_professional_pool_services__all_our_services__card_2__rectangle_11.webp",
     },
     {
       title: "Pool Maintenance",
-      image: "/images/11_our_professional_pool_services__all_our_services__card_3__rectangle_11.jpg",
+      image: "/images/11_our_professional_pool_services__all_our_services__card_3__rectangle_11.webp",
     },
     {
       title: "Equipment Install",
-      image: "/images/12_our_professional_pool_services__all_our_services__card_4__rectangle_11.jpg",
+      image: "/images/12_our_professional_pool_services__all_our_services__card_4__rectangle_11.webp",
     },
     {
       title: "Water Treatment",
-      image: "/images/13_our_professional_pool_services__all_our_services__card_5__rectangle_11.jpg",
+      image: "/images/13_our_professional_pool_services__all_our_services__card_5__rectangle_11.webp",
     },
   ];
 
@@ -59,7 +59,7 @@ export default function Services() {
                 style={{ position: "relative" }}
               >
                 <Image
-                  src="/images/07_our_professional_pool_services__residential_pool_services__rectangle_7.jpg"
+                  src="/images/07_our_professional_pool_services__residential_pool_services__rectangle_7.webp"
                   alt="Residential Pool Services"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -92,7 +92,7 @@ export default function Services() {
                 style={{ position: "relative" }}
               >
                 <Image
-                  src="/images/08_our_professional_pool_services__commercial_pool_services__rectangle_10.jpg"
+                  src="/images/08_our_professional_pool_services__commercial_pool_services__rectangle_10.webp"
                   alt="Commercial Pool Services"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"

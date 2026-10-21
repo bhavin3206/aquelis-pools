@@ -100,7 +100,7 @@ export default function AboutPage() {
                 style={{ position: "relative" }}
               >
                 <Image
-                  src="/images/02_about_us__rectangle_7.jpg"
+                  src="/images/02_about_us__rectangle_7.webp"
                   alt="Pool craftsman at work"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -132,7 +132,7 @@ export default function AboutPage() {
                   style={{ position: "relative" }}
                 >
                   <Image
-                    src="/images/14_why_choose_us__image__rectangle_7.jpg"
+                    src="/images/14_why_choose_us__image__rectangle_7.webp"
                     alt="Luxury custom residential pool"
                     fill
                     sizes="(max-width: 1024px) 100vw, 50vw"

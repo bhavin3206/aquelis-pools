@@ -5,7 +5,7 @@ const testimonials = [
   {
     name: "Alishaan Deol",
     role: "Product Manager, Amazon",
-    image: "/images/23_testimonials__feedback__rectangle_10.jpg",
+    image: "/images/23_testimonials__feedback__rectangle_10.webp",
     quote:
       "Friendly, reliable and thorough weekly service. A big change from my previous pool cleaning company.",
     headline: "Nice job. I'm happy!",
@@ -13,7 +13,7 @@ const testimonials = [
   {
     name: "Sarah Mitchell",
     role: "Homeowner, Princeton NJ",
-    image: "/images/02_about_us__rectangle_7.jpg",
+    image: "/images/02_about_us__rectangle_7.webp",
     quote:
       "They built our dream pool from scratch — on time, on budget. The craftsmanship is absolutely stunning.",
     headline: "Dream pool, delivered.",
@@ -21,7 +21,7 @@ const testimonials = [
   {
     name: "James Okafor",
     role: "Hotel Manager, Cape May",
-    image: "/images/04_about_us__stamp__image_39.jpg",
+    image: "/images/04_about_us__stamp__image_39.webp",
     quote:
       "Our rooftop pool has never looked better. Aquelis's commercial team is world-class and incredibly professional.",
     headline: "World-class service.",

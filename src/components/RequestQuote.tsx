@@ -166,7 +166,7 @@ export default function RequestQuote() {
                   style={{ position: "relative" }}
                 >
                   <Image
-                    src="/images/34_benefits_of_an_indoor_swimming_pool_premise__group_25__rectangle_90.jpg"
+                    src="/images/34_benefits_of_an_indoor_swimming_pool_premise__group_25__rectangle_90.webp"
                     alt="Modern luxury indoor pool villa"
                     fill
                     sizes="(max-width: 1024px) 100vw, 40vw"
