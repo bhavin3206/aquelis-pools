@@ -57,13 +57,13 @@ export default function Team() {
           {members.map((member, idx) => (
             <Reveal key={idx} direction="up" delayMs={idx * 120}>
               <div className={`rounded-3xl p-5 flex flex-col justify-between group hover-lift cursor-pointer ${member.featured ? "bg-[#0F1011] border-2 border-[#1537EE]" : "bg-[#E7E7E9]"}`}>
-                <div className="relative rounded-2xl overflow-hidden h-[340px] mb-5">
+                <div className="relative rounded-2xl overflow-hidden aspect-[3/4] min-h-[380px] sm:min-h-[420px] lg:min-h-[460px] mb-5">
                   <Image
                     src={member.image}
                     alt={member.name}
                     fill
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                    className="object-cover object-top group-hover:scale-105 transition-transform duration-700 ease-out"
                   />
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/15 transition-all duration-300" />
                 </div>
