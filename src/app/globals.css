@@ -1,26 +1,157 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --font-sans: var(--font-archivo), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --font-logo: var(--font-public-sans), sans-serif;
+    --ink: #0F1011;
+    --body-text: #3B3B3D;
+    --muted: #8F9096;
+    --card-bg: #E3E3E5;
+    --card-light: #F4F4F6;
+    --accent-blue: #1537EE;
+    --accent-lime: #F2FF59;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    font-family: var(--font-sans);
+    color: var(--ink);
+    background-color: #F3F3F5;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Premium text selection */
+  ::selection {
+    background: #1537EE;
+    color: white;
+  }
+
+  /* Thin custom scrollbar */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #D8D8DA transparent;
+  }
+
+  /* Focus-visible ring for keyboard nav */
+  *:focus-visible {
+    outline: 2px solid #1537EE;
+    outline-offset: 2px;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-sans);
+    letter-spacing: -0.04em;
+    color: var(--ink);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Hardware-accelerated continuous smooth stamp rotation */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 22s linear infinite;
+  transform-origin: center center;
+  will-change: transform;
+}
+
+.animate-spin-slow:hover {
+  animation-duration: 10s;
+}
+
+.font-logo {
+  font-family: var(--font-logo);
+}
+
+/* Performance: content-visibility on non-hero sections */
+.content-auto {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 700px;
+}
+
+/* Custom design components matching Figma */
+.section-container {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: clamp(1.25rem, 4vw, 4rem);
+  padding-right: clamp(1.25rem, 4vw, 4rem);
+}
+
+.eyebrow-badge {
+  display: inline-block;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--body-text);
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.01em;
+}
+
+.btn-pill-dark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  background-color: var(--ink);
+  color: #FFFFFF;
+  padding: 0.85rem 1.75rem;
+  border-radius: 9999px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.btn-pill-dark:hover {
+  background-color: #1f2124;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px -4px rgba(15, 16, 17, 0.25);
+}
+
+.btn-pill-dark:active {
+  transform: translateY(0);
+}
+
+.arrow-circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 9999px;
+  background-color: rgba(255, 255, 255, 0.15);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-pill-dark:hover .arrow-circle {
+  transform: translate(2px, -2px);
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+/* Smooth card hover lift */
+.hover-lift {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px -8px rgba(15, 16, 17, 0.1);
 }
