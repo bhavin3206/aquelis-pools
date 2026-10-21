@@ -78,7 +78,7 @@ export default function BlogPage() {
                 <Link href={`/blog/${post.slug}`} className="block h-full">
                   <article className="bg-white rounded-3xl p-6 shadow-sm border border-black/5 hover-lift flex flex-col justify-between h-full group cursor-pointer">
                     <div>
-                      <div className="relative rounded-2xl overflow-hidden h-[250px] mb-6">
+                      <div className="relative rounded-2xl overflow-hidden h-[250px] mb-6" style={{ position: "relative" }}>
                         <Image
                           src={post.image}
                           alt={post.title}

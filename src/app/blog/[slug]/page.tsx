@@ -95,7 +95,7 @@ export default async function SingleBlogPostPage({ params }: Props) {
           {/* Author bar */}
           <div className="flex items-center justify-between pb-8 border-b border-[#D8D8DA] mb-10">
             <div className="flex items-center gap-3">
-              <div className="relative w-12 h-12 rounded-full overflow-hidden border-2 border-white shadow-sm flex-shrink-0">
+              <div className="relative w-12 h-12 rounded-full overflow-hidden border-2 border-white shadow-sm flex-shrink-0" style={{ position: "relative" }}>
                 <Image
                   src={post.authorAvatar}
                   alt={post.author}
@@ -120,7 +120,7 @@ export default async function SingleBlogPostPage({ params }: Props) {
           </div>
 
           {/* Featured Hero Image */}
-          <div className="relative rounded-3xl overflow-hidden h-[340px] sm:h-[480px] shadow-sm mb-12">
+          <div className="relative rounded-3xl overflow-hidden h-[340px] sm:h-[480px] shadow-sm mb-12" style={{ position: "relative" }}>
             <Image
               src={post.image}
               alt={post.title}
@@ -149,7 +149,7 @@ export default async function SingleBlogPostPage({ params }: Props) {
 
           {/* Author Bio Box */}
           <div className="mt-14 p-8 rounded-3xl bg-white border border-black/5 shadow-sm flex flex-col sm:flex-row items-center sm:items-start gap-6">
-            <div className="relative w-20 h-20 rounded-full overflow-hidden flex-shrink-0 border-2 border-[#1537EE]">
+            <div className="relative w-20 h-20 rounded-full overflow-hidden flex-shrink-0 border-2 border-[#1537EE]" style={{ position: "relative" }}>
               <Image
                 src={post.authorAvatar}
                 alt={post.author}
@@ -192,7 +192,7 @@ export default async function SingleBlogPostPage({ params }: Props) {
               <Link key={item.slug} href={`/blog/${item.slug}`} className="block group">
                 <div className="bg-white rounded-3xl p-5 border border-black/5 shadow-sm hover-lift h-full flex flex-col justify-between">
                   <div>
-                    <div className="relative rounded-2xl overflow-hidden h-[200px] mb-4">
+                    <div className="relative rounded-2xl overflow-hidden h-[200px] mb-4" style={{ position: "relative" }}>
                       <Image
                         src={item.image}
                         alt={item.title}

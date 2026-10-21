@@ -54,7 +54,10 @@ export default function Services() {
           {/* Residential Card */}
           <Reveal direction="up" delayMs={100}>
             <div className="bg-[#E7E7E9] rounded-3xl p-6 sm:p-8 flex flex-col justify-between group hover-lift cursor-pointer">
-              <div className="relative rounded-2xl overflow-hidden h-[300px] sm:h-[380px] mb-6">
+              <div
+                className="relative rounded-2xl overflow-hidden h-[300px] sm:h-[380px] mb-6"
+                style={{ position: "relative" }}
+              >
                 <Image
                   src="/images/07_our_professional_pool_services__residential_pool_services__rectangle_7.jpg"
                   alt="Residential Pool Services"
@@ -84,7 +87,10 @@ export default function Services() {
           {/* Commercial Card */}
           <Reveal direction="up" delayMs={200}>
             <div className="bg-[#E7E7E9] rounded-3xl p-6 sm:p-8 flex flex-col justify-between group hover-lift cursor-pointer">
-              <div className="relative rounded-2xl overflow-hidden h-[300px] sm:h-[380px] mb-6">
+              <div
+                className="relative rounded-2xl overflow-hidden h-[300px] sm:h-[380px] mb-6"
+                style={{ position: "relative" }}
+              >
                 <Image
                   src="/images/08_our_professional_pool_services__commercial_pool_services__rectangle_10.jpg"
                   alt="Commercial Pool Services"
@@ -139,7 +145,10 @@ export default function Services() {
                   key={idx}
                   className="bg-white rounded-2xl p-3 flex flex-col justify-between group hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-pointer"
                 >
-                  <div className="relative rounded-xl overflow-hidden h-36 mb-3">
+                  <div
+                    className="relative rounded-xl overflow-hidden h-36 mb-3"
+                    style={{ position: "relative" }}
+                  >
                     <Image
                       src={card.image}
                       alt={card.title}

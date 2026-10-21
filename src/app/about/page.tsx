@@ -6,11 +6,12 @@ import Footer from "@/components/Footer";
 import Reveal from "@/components/Reveal";
 import Team from "@/components/Team";
 import InfoStrap from "@/components/InfoStrap";
+import BrandStamp from "@/components/BrandStamp";
 
 export const metadata: Metadata = {
-  title: "About Us — Jal. sarah. Swimming Pool Services",
+  title: "About Us — Aquelis Luxury Pool Architecture",
   description:
-    "Learn about Jalsarah's 25 years of master craftsmanship, certified team of pool engineers, and turnkey pool construction.",
+    "Learn about Aquelis's 25 years of master craftsmanship, certified team of pool engineers, and turnkey pool construction.",
 };
 
 export default function AboutPage() {
@@ -94,7 +95,10 @@ export default function AboutPage() {
 
             {/* Right Photo & Overlapping Stamp */}
             <div className="lg:col-span-6 relative">
-              <div className="relative rounded-3xl overflow-hidden h-[340px] sm:h-[420px] lg:h-[460px] shadow-sm group">
+              <div
+                className="relative rounded-3xl overflow-hidden h-[340px] sm:h-[420px] lg:h-[460px] shadow-sm group"
+                style={{ position: "relative" }}
+              >
                 <Image
                   src="/images/02_about_us__rectangle_7.jpg"
                   alt="Pool craftsman at work"
@@ -105,14 +109,8 @@ export default function AboutPage() {
                 />
               </div>
               {/* Overlapping Stamp */}
-              <div className="absolute -bottom-6 -right-4 sm:-right-6 w-28 h-28 sm:w-32 sm:h-32 animate-spin-slow">
-                <Image
-                  src="/images/04_about_us__stamp__image_39.jpg"
-                  alt="Pool Stamp"
-                  width={128}
-                  height={128}
-                  className="w-full h-full object-contain rounded-full bg-white/95 p-1 shadow-lg"
-                />
+              <div className="absolute -bottom-6 -right-4 sm:-right-6 w-28 h-28 sm:w-32 sm:h-32 animate-spin-slow drop-shadow-xl z-10">
+                <BrandStamp variant="solid-white" size={112} />
               </div>
             </div>
           </div>
@@ -129,7 +127,10 @@ export default function AboutPage() {
             {/* Left Photo */}
             <div className="lg:col-span-6">
               <Reveal direction="right">
-                <div className="relative rounded-3xl overflow-hidden h-[380px] sm:h-[480px] shadow-sm group">
+                <div
+                  className="relative rounded-3xl overflow-hidden h-[380px] sm:h-[480px] shadow-sm group"
+                  style={{ position: "relative" }}
+                >
                   <Image
                     src="/images/14_why_choose_us__image__rectangle_7.jpg"
                     alt="Luxury custom residential pool"

@@ -127,7 +127,7 @@ export default function ProjectsPage() {
                 className="bg-white rounded-3xl overflow-hidden shadow-sm hover-lift border border-black/5 flex flex-col justify-between group"
               >
                 <div>
-                  <div className="relative h-64 overflow-hidden">
+                  <div className="relative h-64 overflow-hidden" style={{ position: "relative" }}>
                     <Image
                       src={item.image}
                       alt={item.title}

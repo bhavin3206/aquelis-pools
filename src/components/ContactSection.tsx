@@ -82,7 +82,10 @@ export default function ContactSection() {
 
               {/* Right Map Image */}
               <div className="lg:col-span-6 relative">
-                <div className="relative rounded-2xl overflow-hidden h-[300px] sm:h-[380px] shadow-sm border border-black/5 bg-white group">
+                <div
+                  className="relative rounded-2xl overflow-hidden h-[300px] sm:h-[380px] shadow-sm border border-black/5 bg-white group"
+                  style={{ position: "relative" }}
+                >
                   <Image
                     src="/images/27_please_contact_us_today__map__rectangle_10.jpg"
                     alt="Area map location"

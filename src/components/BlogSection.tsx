@@ -37,7 +37,10 @@ export default function BlogSection() {
               <Link href={`/blog/${post.slug}`} className="block h-full">
                 <article className="bg-white rounded-3xl p-5 flex flex-col justify-between group hover-lift cursor-pointer h-full border border-black/5 shadow-sm">
                   <div>
-                    <div className="relative rounded-2xl overflow-hidden h-[240px] mb-5">
+                    <div
+                      className="relative rounded-2xl overflow-hidden h-[240px] mb-5"
+                      style={{ position: "relative" }}
+                    >
                       <Image
                         src={post.image}
                         alt={post.title}

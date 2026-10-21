@@ -23,7 +23,10 @@ export default function WhyChooseUs() {
 
         {/* Big Panorama Image */}
         <Reveal direction="up" delayMs={100}>
-          <div className="relative rounded-3xl overflow-hidden h-[300px] sm:h-[420px] lg:h-[480px] shadow-sm mb-16 group">
+          <div
+            className="relative rounded-3xl overflow-hidden h-[300px] sm:h-[420px] lg:h-[480px] shadow-sm mb-16 group"
+            style={{ position: "relative" }}
+          >
             <Image
               src="/images/14_why_choose_us__image__rectangle_7.jpg"
               alt="Panoramic luxury swimming pool"
@@ -65,7 +68,10 @@ export default function WhyChooseUs() {
 
           <div className="lg:col-span-6 relative overflow-visible">
             <Reveal direction="left" delayMs={100}>
-              <div className="relative rounded-3xl overflow-hidden h-[320px] sm:h-[400px] shadow-sm group">
+              <div
+                className="relative rounded-3xl overflow-hidden h-[320px] sm:h-[400px] shadow-sm group"
+                style={{ position: "relative" }}
+              >
                 <Image
                   src="/images/15_why_choose_us__image__rectangle_10.jpg"
                   alt="Pool specialist testing water quality"

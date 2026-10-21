@@ -88,7 +88,10 @@ export default function ContactPage() {
               </div>
 
               {/* Area Map Graphic */}
-              <div className="relative rounded-3xl overflow-hidden h-[300px] shadow-sm border border-black/5 group">
+              <div
+                className="relative rounded-3xl overflow-hidden h-[300px] shadow-sm border border-black/5 group"
+                style={{ position: "relative" }}
+              >
                 <Image
                   src="/images/27_please_contact_us_today__map__rectangle_10.jpg"
                   alt="Area Map Location"

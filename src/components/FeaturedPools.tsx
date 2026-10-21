@@ -144,7 +144,10 @@ export default function FeaturedPools() {
 
               {/* Right Photo with Stamp */}
               <div className="lg:col-span-6 relative">
-                <div className="relative rounded-2xl overflow-hidden h-[340px] sm:h-[440px] shadow-sm group">
+                <div
+                  className="relative rounded-2xl overflow-hidden h-[340px] sm:h-[440px] shadow-sm group"
+                  style={{ position: "relative" }}
+                >
                   <Image
                     key={current.image}
                     src={current.image}

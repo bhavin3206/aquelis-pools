@@ -96,7 +96,10 @@ export default function ServicesPage() {
             {/* Residential Card */}
             <div className="bg-white rounded-3xl p-8 sm:p-10 flex flex-col justify-between hover-lift shadow-sm">
               <div>
-                <div className="relative rounded-2xl overflow-hidden h-[300px] mb-6">
+                <div
+                  className="relative rounded-2xl overflow-hidden h-[300px] mb-6"
+                  style={{ position: "relative" }}
+                >
                   <Image
                     src="/images/07_our_professional_pool_services__residential_pool_services__rectangle_7.jpg"
                     alt="Residential Pools"
@@ -131,7 +134,10 @@ export default function ServicesPage() {
             {/* Commercial Card */}
             <div className="bg-white rounded-3xl p-8 sm:p-10 flex flex-col justify-between hover-lift shadow-sm">
               <div>
-                <div className="relative rounded-2xl overflow-hidden h-[300px] mb-6">
+                <div
+                  className="relative rounded-2xl overflow-hidden h-[300px] mb-6"
+                  style={{ position: "relative" }}
+                >
                   <Image
                     src="/images/08_our_professional_pool_services__commercial_pool_services__rectangle_10.jpg"
                     alt="Commercial Pools"
@@ -181,7 +187,7 @@ export default function ServicesPage() {
               <Reveal key={idx} direction="up" delayMs={idx * 80}>
                 <div className="bg-white rounded-3xl p-6 shadow-sm border border-black/5 hover-lift flex flex-col justify-between h-full">
                   <div>
-                    <div className="relative rounded-2xl overflow-hidden h-48 mb-5">
+                    <div className="relative rounded-2xl overflow-hidden h-48 mb-5" style={{ position: "relative" }}>
                       <Image
                         src={service.image}
                         alt={service.title}

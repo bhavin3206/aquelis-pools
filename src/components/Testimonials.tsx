@@ -91,7 +91,10 @@ export default function Testimonials() {
                     &ldquo;{t.quote}&rdquo;
                   </blockquote>
                   <div className="flex items-center gap-4 pt-2 border-t border-[#D5D5D8]">
-                    <div className="relative w-12 h-12 rounded-full overflow-hidden flex-shrink-0 border-2 border-white shadow-sm">
+                    <div
+                      className="relative w-12 h-12 rounded-full overflow-hidden flex-shrink-0 border-2 border-white shadow-sm"
+                      style={{ position: "relative" }}
+                    >
                       <Image
                         src={t.image}
                         alt={t.name}

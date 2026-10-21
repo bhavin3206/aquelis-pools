@@ -163,6 +163,7 @@ export default function GalleryPage() {
                 <div
                   onClick={() => setSelectedIndex(idx)}
                   className="relative rounded-3xl overflow-hidden shadow-sm border border-black/5 group cursor-pointer h-full min-h-[280px]"
+                  style={{ position: "relative" }}
                 >
                   <Image
                     src={item.image}
@@ -226,6 +227,7 @@ export default function GalleryPage() {
           <div
             onClick={(e) => e.stopPropagation()}
             className="relative max-w-5xl max-h-[85vh] w-full h-full rounded-2xl overflow-hidden shadow-2xl flex flex-col justify-end"
+            style={{ position: "relative" }}
           >
             <Image
               src={filtered[selectedIndex].image}

@@ -161,7 +161,10 @@ export default function RequestQuote() {
                     Request a Quote.
                   </span>
                 </div>
-                <div className="relative rounded-2xl overflow-hidden h-[260px] sm:h-[320px] shadow-sm group">
+                <div
+                  className="relative rounded-2xl overflow-hidden h-[260px] sm:h-[320px] shadow-sm group"
+                  style={{ position: "relative" }}
+                >
                   <Image
                     src="/images/34_benefits_of_an_indoor_swimming_pool_premise__group_25__rectangle_90.jpg"
                     alt="Modern luxury indoor pool villa"

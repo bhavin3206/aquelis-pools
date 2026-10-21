@@ -74,7 +74,10 @@ export default function Hero() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
 
           {/* Left Card: Maldives Resort Pool */}
-          <div className="lg:col-span-6 relative rounded-2xl overflow-hidden min-h-[420px] lg:min-h-[500px] shadow-sm group">
+          <div
+            className="lg:col-span-6 relative rounded-2xl overflow-hidden min-h-[420px] lg:min-h-[500px] shadow-sm group"
+            style={{ position: "relative" }}
+          >
             <Image
               src="/images/29_banner_image__rectangle_86.jpg"
               alt="Udagada Resort, Maldives"
@@ -92,7 +95,10 @@ export default function Hero() {
 
           {/* Right Card: Swimmer & Mask Collage */}
           <div className="lg:col-span-6 flex flex-col justify-between">
-            <div className="relative rounded-2xl overflow-hidden h-[340px] lg:h-[400px] shadow-sm group">
+            <div
+              className="relative rounded-2xl overflow-hidden h-[340px] lg:h-[400px] shadow-sm group"
+              style={{ position: "relative" }}
+            >
               <Image
                 src="/images/31_banner_image__mask_group__image_54.jpg"
                 alt="Swimmer in crystal clear water"
@@ -104,7 +110,10 @@ export default function Hero() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent pointer-events-none" />
 
               {/* Floating accent thumbnail */}
-              <div className="absolute top-4 right-4 w-32 h-32 rounded-xl overflow-hidden border-2 border-white/80 shadow-md">
+              <div
+                className="absolute top-4 right-4 w-32 h-32 rounded-xl overflow-hidden border-2 border-white/80 shadow-md"
+                style={{ position: "absolute" }}
+              >
                 <Image
                   src="/images/30_banner_image__mask_group__image_52.jpg"
                   alt="Clear pool water"

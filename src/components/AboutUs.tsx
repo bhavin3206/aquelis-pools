@@ -10,7 +10,10 @@ export default function AboutUs() {
           {/* Left: Image with Stamps */}
           <div className="lg:col-span-5 relative">
             <Reveal direction="left">
-              <div className="relative rounded-3xl overflow-hidden min-h-[460px] lg:min-h-[560px] shadow-sm group">
+              <div
+                className="relative rounded-3xl overflow-hidden min-h-[460px] lg:min-h-[560px] shadow-sm group"
+                style={{ position: "relative" }}
+              >
                 <Image
                   src="/images/02_about_us__rectangle_7.jpg"
                   alt="Pool technician maintaining swimming pool"
