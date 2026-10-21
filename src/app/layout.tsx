@@ -15,6 +15,7 @@ const publicSans = Public_Sans({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://aquelis-pools.pages.dev"),
   title: "Aquelis — Luxury Swimming Pool Architecture & Valet Care",
   description:
     "You think, we build your dream pool. Premium architectural swimming pool construction, valet maintenance, and turnkey aquatic engineering.",
