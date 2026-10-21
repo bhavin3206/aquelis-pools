@@ -11,7 +11,6 @@ export default function Hero() {
 
           {/* Video — the main visual, covers everything */}
           <video
-            src="/videos/hero-banner.mp4"
             poster="/videos/hero-poster.jpg"
             autoPlay
             loop
@@ -19,7 +18,10 @@ export default function Hero() {
             playsInline
             preload="auto"
             className="absolute inset-0 w-full h-full object-cover"
-          />
+          >
+            <source src="/videos/hero-banner.webm" type="video/webm" />
+            <source src="/videos/hero-banner.mp4" type="video/mp4" />
+          </video>
 
           {/* Overlay: only at the bottom so text is readable, top stays crystal clear */}
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent pointer-events-none" />
