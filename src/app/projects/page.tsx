@@ -72,45 +72,45 @@ export default function ProjectsPage() {
   const filtered = activeTab === "All" ? projects : projects.filter((p) => p.category === activeTab);
 
   return (
-    <main className="min-h-screen bg-[#F3F3F5] text-[#0F1011] overflow-x-hidden">
+    <main className="min-h-screen bg-brand-bg text-brand-text-body overflow-x-hidden">
       <Navbar />
 
-      {/* Unified Hero + Projects Portfolio Section (All visible together) */}
-      <section className="pt-6 sm:pt-8 pb-16 bg-[#ECECED] border-b border-[#D8D8DA]">
+      {/* Unified Hero + Projects Portfolio Section */}
+      <section className="pt-6 sm:pt-8 pb-14 sm:pb-20 bg-brand-subtle border-b border-brand-border">
         <div className="section-container">
           {/* Breadcrumb */}
-          <div className="mb-4 flex items-center gap-2 text-sm">
-            <Link href="/" className="text-[#8F9096] hover:text-[#0F1011] transition-colors font-semibold">
+          <div className="mb-4 flex items-center gap-2 text-xs sm:text-sm">
+            <Link href="/" className="text-brand-text-muted hover:text-brand-text-primary transition-colors font-semibold">
               Home
             </Link>
-            <span className="text-[#8F9096]">&gt;</span>
-            <span className="font-semibold text-[#0F1011]">Projects &amp; Portfolio.</span>
+            <span className="text-brand-text-muted">&gt;</span>
+            <span className="font-semibold text-brand-text-primary">Projects &amp; Portfolio.</span>
           </div>
 
           {/* Header Row */}
-          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-8 pb-6 border-b border-[#D8D8DA]">
+          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-8 pb-6 border-b border-brand-border">
             <div className="max-w-2xl">
               <span className="eyebrow-badge mb-2">Portfolio of Works</span>
-              <h1 className="text-[clamp(2.25rem,4.2vw,4rem)] font-medium leading-[1.05] tracking-[-0.04em] text-[#0F1011] mb-2">
+              <h1 className="text-[clamp(2.25rem,4.2vw,4rem)] font-medium leading-[1.05] tracking-[-0.03em] text-brand-text-primary mb-2">
                 Designs &amp;{" "}
-                <span className="text-[#8F9096] italic font-normal">Featured Pools</span>.
+                <span className="text-brand-text-muted italic font-normal">Featured Pools</span>.
               </h1>
-              <p className="text-[16px] text-[#59595D] leading-relaxed">
+              <p className="text-[15px] sm:text-[16px] text-brand-text-body leading-relaxed">
                 Explore our signature architectural builds, luxury renovations, and
                 commercial aquatic installations across the East Coast and abroad.
               </p>
             </div>
 
-            {/* Filter Tabs */}
-            <div className="flex flex-wrap items-center gap-2">
+            {/* Filter Tabs - horizontally scrollable on mobile */}
+            <div className="flex items-center gap-2 overflow-x-auto no-scrollbar pb-1 max-w-full">
               {tabs.map((tab) => (
                 <button
                   key={tab}
                   onClick={() => setActiveTab(tab)}
-                  className={`px-5 py-2 rounded-full text-[14px] font-medium transition-all cursor-pointer ${
+                  className={`px-4 sm:px-5 py-2 rounded-full text-[13px] sm:text-[14px] font-medium transition-all shrink-0 cursor-pointer ${
                     activeTab === tab
-                      ? "bg-[#0F1011] text-white shadow-sm font-semibold"
-                      : "bg-white text-[#59595D] hover:bg-black/5 hover:text-[#0F1011] border border-black/5"
+                      ? "bg-brand-primary text-white shadow-sm font-semibold"
+                      : "bg-brand-surface text-brand-text-body hover:bg-brand-bg hover:text-brand-text-primary border border-brand-border"
                   }`}
                 >
                   {tab}
@@ -119,80 +119,79 @@ export default function ProjectsPage() {
             </div>
           </div>
 
-          {/* Projects Grid — Displayed immediately without scrolling delay */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filtered.map((item) => (
-              <div
-                key={item.title}
-                className="bg-white rounded-3xl overflow-hidden shadow-sm hover-lift border border-black/5 flex flex-col justify-between group"
-              >
-                <div>
-                  <div className="relative h-64 overflow-hidden" style={{ position: "relative" }}>
-                    <Image
-                      src={item.image}
-                      alt={item.title}
-                      fill
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                      className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
-                    />
-                    <div className="absolute top-4 left-4 bg-[#0F1011]/85 backdrop-blur-md text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
-                      {item.category}
+          {/* Projects Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+            {filtered.map((item, idx) => (
+              <Reveal key={item.title} direction="up" delayMs={idx * 60}>
+                <div className="bg-brand-surface rounded-3xl overflow-hidden shadow-sm hover-lift border border-brand-border flex flex-col justify-between group h-full">
+                  <div>
+                    <div className="relative h-60 sm:h-64 overflow-hidden" style={{ position: "relative" }}>
+                      <Image
+                        src={item.image}
+                        alt={item.title}
+                        fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                      />
+                      <div className="absolute top-4 left-4 bg-brand-text-primary/90 backdrop-blur-md text-white text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">
+                        {item.category}
+                      </div>
+                      <div className="absolute top-4 right-4 bg-brand-surface/95 backdrop-blur-md text-brand-text-primary font-bold text-sm px-3.5 py-1 rounded-full border border-brand-border/60 shadow-sm">
+                        {item.price}
+                      </div>
                     </div>
-                    <div className="absolute top-4 right-4 bg-white/95 backdrop-blur-md text-[#0F1011] font-bold text-sm px-3.5 py-1 rounded-full shadow-sm">
-                      {item.price}
+
+                    <div className="p-6">
+                      <span className="text-xs text-brand-text-muted font-medium block mb-1">
+                        {item.location}
+                      </span>
+                      <h3 className="text-[19px] sm:text-[20px] font-bold text-brand-text-primary mb-2 leading-snug group-hover:text-brand-primary transition-colors">
+                        {item.title}
+                      </h3>
+                      <p className="text-[13px] text-brand-text-body font-medium mb-4">
+                        {item.dimensions}
+                      </p>
+                      <div className="pt-3 border-t border-brand-border text-[12px] text-brand-text-muted">
+                        {item.specs}
+                      </div>
                     </div>
                   </div>
 
-                  <div className="p-6">
-                    <span className="text-xs text-[#8F9096] font-medium block mb-1">
-                      {item.location}
-                    </span>
-                    <h3 className="text-[20px] font-bold text-[#0F1011] mb-2 leading-snug group-hover:text-[#1537EE] transition-colors">
-                      {item.title}
-                    </h3>
-                    <p className="text-[13px] text-[#59595D] font-medium mb-4">
-                      {item.dimensions}
-                    </p>
-                    <div className="pt-3 border-t border-black/5 text-[12px] text-[#71717A]">
-                      {item.specs}
-                    </div>
+                  <div className="px-6 pb-6 pt-2">
+                    <Link
+                      href="/contact"
+                      className="w-full py-2.5 rounded-full text-center text-xs font-bold border border-brand-border text-brand-text-primary hover:bg-brand-primary hover:text-white hover:border-brand-primary transition-all flex items-center justify-center gap-1.5 cursor-pointer"
+                    >
+                      <span>Request Project Blueprint</span>
+                      <span>↗</span>
+                    </Link>
                   </div>
                 </div>
-
-                <div className="px-6 pb-6 pt-2">
-                  <Link
-                    href="/contact"
-                    className="w-full py-2.5 rounded-full text-center text-xs font-bold border border-black/15 group-hover:bg-[#0F1011] group-hover:text-white transition-all flex items-center justify-center gap-1.5 cursor-pointer"
-                  >
-                    <span>Request Project Blueprint</span>
-                    <span>↗</span>
-                  </Link>
-                </div>
-              </div>
+              </Reveal>
             ))}
           </div>
         </div>
       </section>
 
       {/* Stats Summary Strap */}
-      <section className="py-16 bg-white border-b border-[#D8D8DA]">
+      <section className="py-12 sm:py-16 bg-brand-surface border-b border-brand-border">
         <div className="section-container">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 text-center">
             <div>
-              <span className="text-[clamp(2.5rem,4vw,3.5rem)] font-bold text-[#1537EE] block">2,300+</span>
-              <span className="text-[14px] text-[#59595D] font-medium">Custom Pools Built</span>
+              <span className="text-[clamp(2.25rem,4vw,3.5rem)] font-bold text-brand-primary block leading-none mb-1">2,300+</span>
+              <span className="text-[13px] sm:text-[14px] text-brand-text-body font-medium">Custom Pools Built</span>
             </div>
             <div>
-              <span className="text-[clamp(2.5rem,4vw,3.5rem)] font-bold text-[#0F1011] block">25+</span>
-              <span className="text-[14px] text-[#59595D] font-medium">Years in Business</span>
+              <span className="text-[clamp(2.25rem,4vw,3.5rem)] font-bold text-brand-text-primary block leading-none mb-1">25+</span>
+              <span className="text-[13px] sm:text-[14px] text-brand-text-body font-medium">Years in Business</span>
             </div>
             <div>
-              <span className="text-[clamp(2.5rem,4vw,3.5rem)] font-bold text-[#1537EE] block">99.8%</span>
-              <span className="text-[14px] text-[#59595D] font-medium">Water Clarity Score</span>
+              <span className="text-[clamp(2.25rem,4vw,3.5rem)] font-bold text-brand-primary block leading-none mb-1">99.8%</span>
+              <span className="text-[13px] sm:text-[14px] text-brand-text-body font-medium">Water Clarity Score</span>
             </div>
             <div>
-              <span className="text-[clamp(2.5rem,4vw,3.5rem)] font-bold text-[#0F1011] block">14</span>
-              <span className="text-[14px] text-[#59595D] font-medium">Design &amp; Craft Awards</span>
+              <span className="text-[clamp(2.25rem,4vw,3.5rem)] font-bold text-brand-text-primary block leading-none mb-1">14</span>
+              <span className="text-[13px] sm:text-[14px] text-brand-text-body font-medium">Design &amp; Craft Awards</span>
             </div>
           </div>
         </div>
@@ -202,12 +201,12 @@ export default function ProjectsPage() {
       <Testimonials />
 
       {/* Bottom CTA */}
-      <section className="py-20 bg-[#DFDFE1] text-center">
+      <section className="py-16 sm:py-20 bg-brand-subtle text-center border-t border-brand-border">
         <div className="section-container">
-          <h2 className="text-[clamp(2.25rem,4.5vw,4rem)] font-medium text-[#0F1011] tracking-tight mb-6">
+          <h2 className="text-[clamp(2rem,4vw,3.5rem)] font-medium text-brand-text-primary tracking-tight mb-4">
             Have a custom pool project in mind?
           </h2>
-          <p className="text-[16px] text-[#59595D] max-w-xl mx-auto mb-8">
+          <p className="text-[15px] sm:text-[16px] text-brand-text-body max-w-xl mx-auto mb-8">
             Our engineers can bring your architectural sketch or yard layout into a realistic 3D proposal.
           </p>
           <Link href="/contact" className="btn-pill-dark group">

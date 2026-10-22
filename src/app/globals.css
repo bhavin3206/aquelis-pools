@@ -1,16 +1,34 @@
 @import "tailwindcss";
 
+@theme {
+  --color-brand-primary: #0B2FC7;
+  --color-brand-primary-hover: #082396;
+  --color-brand-primary-light: #EFF3FF;
+  --color-brand-ink: #090A0C;
+  --color-brand-bg: #FAFAFC;
+  --color-brand-surface: #FFFFFF;
+  --color-brand-subtle: #F1F3F7;
+  --color-brand-muted: #E5E8EF;
+  --color-brand-border: #E2E5EC;
+  --color-brand-text-primary: #090A0C;
+  --color-brand-text-body: #2B2F38;
+  --color-brand-text-muted: #525866;
+  --color-brand-accent: #00909C;
+  --color-brand-accent-glow: #38E1EC;
+}
+
 @layer base {
   :root {
     --font-sans: var(--font-archivo), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     --font-logo: var(--font-public-sans), sans-serif;
-    --ink: #0F1011;
-    --body-text: #3B3B3D;
-    --muted: #8F9096;
-    --card-bg: #E3E3E5;
-    --card-light: #F4F4F6;
-    --accent-blue: #1537EE;
-    --accent-lime: #F2FF59;
+    --ink: #090A0C;
+    --body-text: #2B2F38;
+    --muted: #525866;
+    --card-bg: #FFFFFF;
+    --card-light: #FAFAFC;
+    --accent-blue: #0B2FC7;
+    --accent-glow: #38E1EC;
+    --accent-teal: #00909C;
   }
 
   * {
@@ -19,32 +37,34 @@
 
   html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
   }
 
   body {
     margin: 0;
     font-family: var(--font-sans);
-    color: var(--ink);
-    background-color: #F3F3F5;
+    color: var(--body-text);
+    background-color: #FAFAFC;
+    overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
   }
 
   /* Premium text selection */
   ::selection {
-    background: #1537EE;
+    background: #0B2FC7;
     color: white;
   }
 
   /* Thin custom scrollbar */
   * {
     scrollbar-width: thin;
-    scrollbar-color: #D8D8DA transparent;
+    scrollbar-color: #E2E5EC transparent;
   }
 
   /* Focus-visible ring for keyboard nav */
   *:focus-visible {
-    outline: 2px solid #1537EE;
+    outline: 2px solid #0B2FC7;
     outline-offset: 2px;
   }
 
@@ -52,6 +72,16 @@
     font-family: var(--font-sans);
     letter-spacing: -0.04em;
     color: var(--ink);
+  }
+
+  /* Form inputs mobile auto-zoom fix */
+  input, select, textarea {
+    font-size: 16px !important;
+  }
+  @media (min-width: 640px) {
+    input, select, textarea {
+      font-size: inherit !important;
+    }
   }
 }
 
@@ -79,25 +109,25 @@
   font-family: var(--font-logo);
 }
 
-/* Performance: content-visibility on non-hero sections */
 .content-auto {
-  /* Clean rendering without skipping hydration styles */
+  /* Clean rendering without hydration issues */
 }
 
-/* Custom design components matching Figma */
+/* Fluid responsive section container */
 .section-container {
+  width: 100%;
   max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: clamp(1.25rem, 4vw, 4rem);
-  padding-right: clamp(1.25rem, 4vw, 4rem);
+  padding-left: clamp(1rem, 3.5vw, 3.5rem);
+  padding-right: clamp(1rem, 3.5vw, 3.5rem);
 }
 
 .eyebrow-badge {
   display: inline-block;
-  font-size: 0.95rem;
-  font-weight: 500;
-  color: var(--body-text);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--muted);
   margin-bottom: 0.75rem;
   letter-spacing: -0.01em;
 }
@@ -120,9 +150,9 @@
 }
 
 .btn-pill-dark:hover {
-  background-color: #1f2124;
+  background-color: #1A1C20;
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px -4px rgba(15, 16, 17, 0.25);
+  box-shadow: 0 8px 24px -4px rgba(9, 10, 12, 0.25);
 }
 
 .btn-pill-dark:active {
@@ -152,5 +182,14 @@
 
 .hover-lift:hover {
   transform: translateY(-4px);
-  box-shadow: 0 16px 32px -8px rgba(15, 16, 17, 0.1);
+  box-shadow: 0 16px 32px -8px rgba(9, 10, 12, 0.08);
+}
+
+/* Horizontal scroll without scrollbar */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }

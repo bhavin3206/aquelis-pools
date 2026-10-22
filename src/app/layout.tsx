@@ -28,7 +28,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" data-scroll-behavior="smooth" className={`${archivo.variable} ${publicSans.variable}`}>
-      <body className="antialiased font-sans bg-[#F4F4F5] text-[#0F1011]">
+      <body className="antialiased font-sans bg-brand-bg text-brand-text-body">
         {children}
       </body>
     </html>

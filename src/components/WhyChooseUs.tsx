@@ -4,53 +4,53 @@ import BrandStamp from "@/components/BrandStamp";
 
 export default function WhyChooseUs() {
   return (
-    <section className="py-24 bg-[#EBEBED] content-auto">
+    <section className="py-16 sm:py-24 bg-brand-bg content-auto">
       <div className="section-container">
         {/* Heading */}
-        <div className="max-w-3xl mb-12">
+        <div className="max-w-3xl mb-8 sm:mb-14">
           <Reveal direction="up">
             <span className="eyebrow-badge">Why Choose Us.</span>
-            <h2 className="text-[clamp(2.5rem,5vw,5rem)] font-medium leading-[1.02] tracking-[-0.04em] text-[#0F1011] mb-4">
+            <h2 className="text-[clamp(2.25rem,4.5vw,4.5rem)] font-medium leading-[1.02] tracking-[-0.04em] text-brand-ink mb-4">
               Worry-free, technology-
               <br />
               driven reliability.
             </h2>
-            <p className="text-[16px] text-[#59595D]">
+            <p className="text-[15px] sm:text-[16px] text-brand-text-body">
               Delivering premium pool construction and white-glove care for 25+ years.
             </p>
           </Reveal>
         </div>
 
-        {/* Big Panorama Image */}
-        <Reveal direction="up" delayMs={100}>
+        {/* Big Panorama Image - 100% fluid mobile-first */}
+        <Reveal direction="up" delayMs={100} className="w-full">
           <div
-            className="relative rounded-3xl overflow-hidden h-[300px] sm:h-[420px] lg:h-[480px] shadow-sm mb-16 group"
+            className="relative w-full max-w-full rounded-2xl sm:rounded-3xl overflow-hidden aspect-[16/10] sm:aspect-[16/9] lg:aspect-[21/9] shadow-sm mb-12 sm:mb-16 group"
             style={{ position: "relative" }}
           >
             <Image
               src="/images/14_why_choose_us__image__rectangle_7.webp"
               alt="Panoramic luxury swimming pool"
               fill
-              sizes="100vw"
-              className="object-cover group-hover:scale-105 transition-transform duration-1000 ease-out"
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 95vw, 1280px"
+              className="object-cover object-center group-hover:scale-105 transition-transform duration-1000 ease-out"
             />
             {/* Frosted contextual pill overlay */}
-            <div className="absolute bottom-6 left-6 bg-black/60 backdrop-blur-md text-white text-xs sm:text-sm font-medium px-4 py-2 rounded-full border border-white/10 flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-[#F2FF59] animate-pulse"></span>
-              Personalized Weekly Valet • New Jersey
+            <div className="absolute bottom-3 sm:bottom-6 left-3 sm:left-6 max-w-[calc(100%-1.5rem)] bg-black/60 backdrop-blur-md text-white text-[11px] sm:text-sm font-medium px-3 sm:px-4 py-1.5 sm:py-2 rounded-full border border-white/10 flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-brand-accent-glow animate-pulse shrink-0"></span>
+              <span className="truncate">Personalized Weekly Valet • New Jersey</span>
             </div>
           </div>
         </Reveal>
 
         {/* Personalized Service Split */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           <div className="lg:col-span-6 space-y-6">
             <Reveal direction="right">
               <span className="eyebrow-badge">Personalized</span>
-              <h3 className="text-[clamp(2rem,3.5vw,3.5rem)] font-medium tracking-tight text-[#0F1011]">
+              <h3 className="text-[clamp(1.75rem,3.2vw,3.25rem)] font-medium tracking-tight text-brand-ink">
                 Personalized Service.
               </h3>
-              <p className="text-[16px] leading-relaxed text-[#59595D] max-w-lg">
+              <p className="text-[15px] sm:text-[16px] leading-relaxed text-brand-text-body max-w-lg">
                 Our certified technicians regularly test and balance the water chemistry,
                 maintaining optimal pH, alkalinity, and chlorine levels for a safe and
                 enjoyable swimming experience. Every package is molded to your property.
@@ -66,10 +66,10 @@ export default function WhyChooseUs() {
             </Reveal>
           </div>
 
-          <div className="lg:col-span-6 relative overflow-visible">
-            <Reveal direction="left" delayMs={100}>
+          <div className="lg:col-span-6 relative overflow-hidden sm:overflow-visible">
+            <Reveal direction="left" delayMs={100} className="w-full">
               <div
-                className="relative rounded-3xl overflow-hidden h-[320px] sm:h-[400px] shadow-sm group"
+                className="relative w-full rounded-2xl sm:rounded-3xl overflow-hidden aspect-[4/3] sm:aspect-auto sm:h-[400px] shadow-sm group"
                 style={{ position: "relative" }}
               >
                 <Image
@@ -80,9 +80,9 @@ export default function WhyChooseUs() {
                   className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                 />
               </div>
-              {/* Rotating Vector Stamp */}
-              <div className="absolute -bottom-6 -right-6 w-28 h-28 animate-spin-slow hover:scale-110 transition-transform drop-shadow-xl z-10">
-                <BrandStamp variant="solid-white" size={112} />
+              {/* Rotating Vector Stamp - contained safely */}
+              <div className="absolute -bottom-4 right-2 sm:-bottom-6 sm:-right-4 w-20 h-20 sm:w-28 sm:h-28 animate-spin-slow hover:scale-110 transition-transform drop-shadow-xl z-10 pointer-events-none">
+                <BrandStamp variant="solid-white" size={100} />
               </div>
             </Reveal>
           </div>

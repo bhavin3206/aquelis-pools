@@ -17,63 +17,54 @@ export default function GalleryPage() {
       location: "Udagada Resort, Maldives",
       category: "Commercial & Resort",
       image: "/images/29_banner_image__rectangle_86.webp",
-      span: "md:col-span-2 md:row-span-2",
     },
     {
       title: "Turquoise Mosaic Courtyard",
       location: "Princeton, NJ",
       category: "Modern Residential",
       image: "/images/07_our_professional_pool_services__residential_pool_services__rectangle_7.webp",
-      span: "md:col-span-1 md:row-span-1",
     },
     {
       title: "Rooftop Commercial Deck",
       location: "Cape May, NJ",
       category: "Commercial & Resort",
       image: "/images/08_our_professional_pool_services__commercial_pool_services__rectangle_10.webp",
-      span: "md:col-span-1 md:row-span-1",
     },
     {
       title: "Indoor Heated Wellness Villa",
       location: "Alpine, NJ",
       category: "Indoor & Spa",
       image: "/images/34_benefits_of_an_indoor_swimming_pool_premise__group_25__rectangle_90.webp",
-      span: "md:col-span-2 md:row-span-1",
     },
     {
       title: "Infinity Skyline Overlook",
       location: "Hernes, NJ",
       category: "Modern Residential",
       image: "/images/21_designs__featured_pools__rectangle_10.webp",
-      span: "md:col-span-1 md:row-span-2",
     },
     {
       title: "Natural Stone Lagoon Sanctuary",
       location: "Rumson, NJ",
       category: "Modern Residential",
       image: "/images/14_why_choose_us__image__rectangle_7.webp",
-      span: "md:col-span-2 md:row-span-1",
     },
     {
       title: "Active Swimmer Clear Waters",
       location: "Saddle River, NJ",
       category: "Details & Equipment",
       image: "/images/31_banner_image__mask_group__image_54.webp",
-      span: "md:col-span-1 md:row-span-1",
     },
     {
       title: "Precision Filtration & Pump Setup",
       location: "Colts Neck, NJ",
       category: "Details & Equipment",
       image: "/images/11_our_professional_pool_services__all_our_services__card_3__rectangle_11.webp",
-      span: "md:col-span-1 md:row-span-1",
     },
     {
       title: "Sunken Firepit & Lounge Pool",
       location: "Short Hills, NJ",
       category: "Modern Residential",
       image: "/images/09_our_professional_pool_services__all_our_services__card_01__rectangle_11.webp",
-      span: "md:col-span-1 md:row-span-1",
     },
   ];
 
@@ -106,44 +97,44 @@ export default function GalleryPage() {
   }, [selectedIndex, handleNext, handlePrev]);
 
   return (
-    <main className="min-h-screen bg-[#F3F3F5] text-[#0F1011] overflow-x-hidden">
+    <main className="min-h-screen bg-brand-bg text-brand-text-body overflow-x-hidden">
       <Navbar />
 
       {/* Header */}
-      <section className="pt-10 pb-12 border-b border-[#D8D8DA]">
+      <section className="pt-8 sm:pt-12 pb-10 sm:pb-14 border-b border-brand-border bg-brand-bg">
         <div className="section-container">
           {/* Breadcrumb */}
-          <div className="mb-6 flex items-center gap-2 text-sm">
-            <Link href="/" className="text-[#8F9096] hover:text-[#0F1011] transition-colors font-semibold">
+          <div className="mb-6 flex items-center gap-2 text-xs sm:text-sm">
+            <Link href="/" className="text-brand-text-muted hover:text-brand-text-primary transition-colors font-semibold">
               Home
             </Link>
-            <span className="text-[#8F9096]">&gt;</span>
-            <span className="font-semibold text-[#0F1011]">Gallery &amp; Showcase.</span>
+            <span className="text-brand-text-muted">&gt;</span>
+            <span className="font-semibold text-brand-text-primary">Gallery &amp; Showcase.</span>
           </div>
 
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
+          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
             <div className="max-w-3xl">
               <span className="eyebrow-badge">Visual Inspiration</span>
-              <h1 className="text-[clamp(2.5rem,5vw,5rem)] font-medium leading-[1.02] tracking-[-0.04em] text-[#0F1011] mb-4">
+              <h1 className="text-[clamp(2.25rem,5vw,4.5rem)] font-medium leading-[1.05] tracking-[-0.03em] text-brand-text-primary mb-4">
                 Our Gallery of{" "}
-                <span className="text-[#8F9096] italic font-normal">Dream Pools</span>.
+                <span className="text-brand-text-muted italic font-normal">Dream Pools</span>.
               </h1>
-              <p className="text-[17px] text-[#59595D] leading-relaxed">
+              <p className="text-[15px] sm:text-[17px] text-brand-text-body leading-relaxed">
                 A curated visual collection of residential retreats, luxury hotel installations,
-                and state-of-the-art indoor aquatic architecture built by Jalsarah.
+                and state-of-the-art indoor aquatic architecture built by Aquelis.
               </p>
             </div>
 
-            {/* Filter buttons */}
-            <div className="flex flex-wrap items-center gap-2">
+            {/* Filter buttons - horizontally scrollable on mobile */}
+            <div className="flex items-center gap-2 overflow-x-auto no-scrollbar pb-1 max-w-full">
               {filters.map((f) => (
                 <button
                   key={f}
                   onClick={() => setActiveFilter(f)}
-                  className={`px-4 py-2 rounded-full text-[13px] font-medium transition-all cursor-pointer ${
+                  className={`px-4 py-2 rounded-full text-[13px] font-medium transition-all shrink-0 cursor-pointer ${
                     activeFilter === f
-                      ? "bg-[#0F1011] text-white shadow-md scale-105"
-                      : "bg-white text-[#59595D] hover:text-[#0F1011] border border-black/5"
+                      ? "bg-brand-primary text-white shadow-sm font-semibold"
+                      : "bg-brand-surface text-brand-text-body hover:bg-brand-subtle hover:text-brand-text-primary border border-brand-border"
                   }`}
                 >
                   {f}
@@ -155,14 +146,14 @@ export default function GalleryPage() {
       </section>
 
       {/* Gallery Showcase Grid */}
-      <section className="py-24 bg-[#ECECED]">
+      <section className="py-14 sm:py-20 bg-brand-subtle">
         <div className="section-container">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 auto-rows-[280px]">
             {filtered.map((item, idx) => (
-              <Reveal key={item.title} direction="up" delayMs={idx * 60}>
+              <Reveal key={item.title} direction="up" delayMs={idx * 50}>
                 <div
                   onClick={() => setSelectedIndex(idx)}
-                  className="relative rounded-3xl overflow-hidden shadow-sm border border-black/5 group cursor-pointer h-full min-h-[280px]"
+                  className="relative rounded-3xl overflow-hidden shadow-sm border border-brand-border group cursor-pointer h-full min-h-[280px]"
                   style={{ position: "relative" }}
                 >
                   <Image
@@ -172,15 +163,15 @@ export default function GalleryPage() {
                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-90 transition-opacity" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent opacity-70 group-hover:opacity-90 transition-opacity" />
 
                   <div className="absolute bottom-6 left-6 right-6 text-white transform group-hover:-translate-y-1 transition-transform">
-                    <span className="text-xs uppercase tracking-wider font-bold text-[#F2FF59] block mb-1">
+                    <span className="text-xs uppercase tracking-wider font-bold text-brand-accent-glow block mb-1">
                       {item.category}
                     </span>
-                    <h3 className="text-[20px] font-bold leading-snug">{item.title}</h3>
+                    <h3 className="text-[19px] sm:text-[20px] font-bold leading-snug">{item.title}</h3>
                     <p className="text-xs text-gray-300 mt-1 flex items-center gap-1">
-                      📍 {item.location}
+                      <span>📍</span> {item.location}
                     </p>
                   </div>
 
@@ -206,7 +197,7 @@ export default function GalleryPage() {
               e.stopPropagation();
               handlePrev();
             }}
-            className="absolute left-4 sm:left-8 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-white text-white hover:text-black flex items-center justify-center text-2xl transition-all z-10"
+            className="absolute left-3 sm:left-8 top-1/2 -translate-y-1/2 w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-white/10 hover:bg-white text-white hover:text-black flex items-center justify-center text-2xl transition-all z-10 cursor-pointer"
             aria-label="Previous image"
           >
             ‹
@@ -218,7 +209,7 @@ export default function GalleryPage() {
               e.stopPropagation();
               handleNext();
             }}
-            className="absolute right-4 sm:right-8 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-white text-white hover:text-black flex items-center justify-center text-2xl transition-all z-10"
+            className="absolute right-3 sm:right-8 top-1/2 -translate-y-1/2 w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-white/10 hover:bg-white text-white hover:text-black flex items-center justify-center text-2xl transition-all z-10 cursor-pointer"
             aria-label="Next image"
           >
             ›
@@ -236,8 +227,8 @@ export default function GalleryPage() {
               sizes="90vw"
               className="object-contain"
             />
-            <div className="relative z-10 p-6 bg-gradient-to-t from-black/80 via-black/40 to-transparent text-white">
-              <span className="text-xs font-bold uppercase tracking-wider text-[#F2FF59]">
+            <div className="relative z-10 p-6 bg-gradient-to-t from-black/85 via-black/45 to-transparent text-white">
+              <span className="text-xs font-bold uppercase tracking-wider text-brand-accent-glow">
                 {filtered[selectedIndex].category}
               </span>
               <h3 className="text-xl font-bold">{filtered[selectedIndex].title}</h3>
@@ -245,7 +236,8 @@ export default function GalleryPage() {
             </div>
             <button
               onClick={() => setSelectedIndex(null)}
-              className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/20 text-white flex items-center justify-center text-xl hover:bg-white hover:text-black transition-colors z-20"
+              className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/20 text-white flex items-center justify-center text-xl hover:bg-white hover:text-black transition-colors z-20 cursor-pointer"
+              aria-label="Close lightbox"
             >
               ✕
             </button>
@@ -254,12 +246,12 @@ export default function GalleryPage() {
       )}
 
       {/* Bottom CTA */}
-      <section className="py-20 bg-white border-t border-[#D8D8DA] text-center">
+      <section className="py-16 sm:py-20 bg-brand-surface border-t border-brand-border text-center">
         <div className="section-container">
-          <h2 className="text-[clamp(2.25rem,4vw,3.5rem)] font-medium text-[#0F1011] tracking-tight mb-4">
+          <h2 className="text-[clamp(2rem,4vw,3.5rem)] font-medium text-brand-text-primary tracking-tight mb-4">
             See something you love?
           </h2>
-          <p className="text-[16px] text-[#59595D] max-w-lg mx-auto mb-8">
+          <p className="text-[15px] sm:text-[16px] text-brand-text-body max-w-lg mx-auto mb-8">
             Our architectural team can adapt any design from our portfolio to match your
             property&apos;s terrain, sunlight, and architecture.
           </p>

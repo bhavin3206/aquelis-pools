@@ -46,47 +46,47 @@ export default function AboutPage() {
   ];
 
   return (
-    <main className="min-h-screen bg-[#F3F3F5] text-[#0F1011] overflow-x-hidden">
+    <main className="min-h-screen bg-brand-bg text-brand-text-body overflow-x-hidden">
       <Navbar />
 
-      {/* Figma 03 About Us Hero Banner: Unified Headline + Image */}
-      <section className="pt-10 pb-16 lg:pb-20 border-b border-[#D8D8DA]">
+      {/* Hero Banner: Unified Headline + Image */}
+      <section className="pt-8 sm:pt-10 pb-14 sm:pb-20 border-b border-brand-border">
         <div className="section-container">
-          {/* Breadcrumb matching Figma */}
+          {/* Breadcrumb */}
           <div className="mb-6 flex items-center gap-2 text-sm">
-            <Link href="/" className="text-[#8F9096] hover:text-[#0F1011] transition-colors font-semibold">
+            <Link href="/" className="text-brand-text-muted hover:text-brand-ink transition-colors font-semibold">
               Home
             </Link>
-            <span className="text-[#8F9096]">&gt;</span>
-            <span className="font-semibold text-[#0F1011]">About us.</span>
+            <span className="text-brand-text-muted">&gt;</span>
+            <span className="font-semibold text-brand-ink">About us.</span>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             {/* Left Content */}
-            <div className="lg:col-span-6 space-y-6">
-              <span className="eyebrow-badge">About Jalsarah</span>
-              <h1 className="text-[clamp(2.75rem,5.2vw,5.5rem)] font-medium leading-[1.02] tracking-[-0.04em] text-[#0F1011]">
-                We builds the best{" "}
-                <span className="text-[#8F9096] italic font-normal">pools.</span>
+            <div className="lg:col-span-6 space-y-5 sm:space-y-6">
+              <span className="eyebrow-badge">About Aquelis</span>
+              <h1 className="text-[clamp(2.5rem,5vw,5rem)] font-medium leading-[1.02] tracking-[-0.04em] text-brand-ink">
+                We build the finest{" "}
+                <span className="text-brand-text-muted italic font-normal">pools.</span>
               </h1>
-              <p className="text-[20px] font-medium text-[#0F1011] leading-snug">
+              <p className="text-[18px] sm:text-[20px] font-medium text-brand-ink leading-snug">
                 Owning a pool is a fun part, let us handle the rest.
               </p>
-              <p className="text-[16px] text-[#59595D] leading-relaxed max-w-xl">
-                For over 25 years, Jalsarah has combined architectural sophistication,
+              <p className="text-[15px] sm:text-[16px] text-brand-text-body leading-relaxed max-w-xl">
+                For over 25 years, Aquelis has combined architectural sophistication,
                 flawless hydraulic engineering, and meticulous weekly service for
                 discerning homeowners and commercial resorts.
               </p>
-              <div className="pt-2 flex flex-wrap items-center gap-4">
+              <div className="pt-2 flex flex-wrap items-center gap-3 sm:gap-4">
                 <Link href="/contact" className="btn-pill-dark group">
-                  <span>Schedule an On-site Consultation</span>
+                  <span>Schedule Consultation</span>
                   <span className="arrow-circle group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">
                     ↗
                   </span>
                 </Link>
                 <Link
                   href="/services"
-                  className="px-6 py-3.5 rounded-full font-semibold text-sm border border-black/15 hover:border-black/40 text-[#0F1011] transition-all"
+                  className="px-5 sm:px-6 py-3 sm:py-3.5 rounded-full font-semibold text-sm border border-brand-border hover:border-brand-ink text-brand-ink transition-all"
                 >
                   Explore Capabilities
                 </Link>
@@ -94,9 +94,9 @@ export default function AboutPage() {
             </div>
 
             {/* Right Photo & Overlapping Stamp */}
-            <div className="lg:col-span-6 relative">
+            <div className="lg:col-span-6 relative overflow-hidden sm:overflow-visible">
               <div
-                className="relative rounded-3xl overflow-hidden h-[340px] sm:h-[420px] lg:h-[460px] shadow-sm group"
+                className="relative rounded-3xl overflow-hidden aspect-[16/11] sm:h-[420px] lg:h-[460px] shadow-sm group"
                 style={{ position: "relative" }}
               >
                 <Image
@@ -108,9 +108,9 @@ export default function AboutPage() {
                   priority
                 />
               </div>
-              {/* Overlapping Stamp */}
-              <div className="absolute -bottom-6 -right-4 sm:-right-6 w-28 h-28 sm:w-32 sm:h-32 animate-spin-slow drop-shadow-xl z-10">
-                <BrandStamp variant="solid-white" size={112} />
+              {/* Overlapping Stamp - contained safely */}
+              <div className="absolute -bottom-4 right-2 sm:-bottom-6 sm:-right-4 w-20 h-20 sm:w-28 sm:h-28 animate-spin-slow hover:scale-110 transition-transform drop-shadow-xl z-10">
+                <BrandStamp variant="solid-white" size={100} />
               </div>
             </div>
           </div>
@@ -121,14 +121,14 @@ export default function AboutPage() {
       <InfoStrap />
 
       {/* Philosophy & Story Section */}
-      <section className="py-20 lg:py-24 bg-[#ECECED]">
+      <section className="py-20 lg:py-24 bg-brand-subtle">
         <div className="section-container">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
             {/* Left Photo */}
             <div className="lg:col-span-6">
               <Reveal direction="right">
                 <div
-                  className="relative rounded-3xl overflow-hidden h-[380px] sm:h-[480px] shadow-sm group"
+                  className="relative rounded-3xl overflow-hidden aspect-[16/11] sm:h-[440px] shadow-sm group"
                   style={{ position: "relative" }}
                 >
                   <Image
@@ -146,27 +146,27 @@ export default function AboutPage() {
             <div className="lg:col-span-6 space-y-6">
               <Reveal direction="left">
                 <span className="eyebrow-badge">Benefits of Choosing Us</span>
-                <h2 className="text-[clamp(2.25rem,4vw,3.75rem)] font-medium leading-tight tracking-tight text-[#0F1011]">
+                <h2 className="text-[clamp(2.15rem,3.8vw,3.5rem)] font-medium leading-tight tracking-tight text-brand-ink">
                   Simplify Pool Maintenance with Expert Engineering.
                 </h2>
-                <p className="text-[16px] leading-relaxed text-[#59595D]">
+                <p className="text-[15px] sm:text-[16px] leading-relaxed text-brand-text-body">
                   Many health clubs, fitness centers, and private clubs such as the YMCA
                   rely on dependable water care. We bring that exact commercial-grade
                   rigor, safety, and pristine clarity to your private backyard oasis.
                 </p>
-                <p className="text-[16px] leading-relaxed text-[#59595D]">
+                <p className="text-[15px] sm:text-[16px] leading-relaxed text-brand-text-body">
                   We believe that owning a pool is meant to be the fun, rejuvenating
                   part of life. Our technicians handle chemical balance, winterization,
                   seasonal startup, tile grooming, and pump repairs seamlessly in the background.
                 </p>
 
-                <div className="pt-2 flex flex-col sm:flex-row gap-4 text-sm font-semibold text-[#0F1011]">
+                <div className="pt-2 flex flex-col sm:flex-row gap-4 text-sm font-semibold text-brand-ink">
                   <div className="flex items-center gap-2">
-                    <span className="text-[#1537EE] text-lg font-bold">✓</span>
+                    <span className="text-brand-primary text-lg font-bold">✓</span>
                     <span>Certified Master Pool Builders</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <span className="text-[#1537EE] text-lg font-bold">✓</span>
+                    <span className="text-brand-primary text-lg font-bold">✓</span>
                     <span>99.8% Water Quality Reliability</span>
                   </div>
                 </div>
@@ -177,23 +177,23 @@ export default function AboutPage() {
       </section>
 
       {/* Values Grid */}
-      <section className="py-20 lg:py-24 bg-[#F3F3F5]">
+      <section className="py-20 lg:py-24 bg-brand-bg">
         <div className="section-container">
-          <div className="max-w-2xl mb-14">
+          <div className="max-w-2xl mb-12 sm:mb-14">
             <span className="eyebrow-badge">Core Pillars</span>
-            <h2 className="text-[clamp(2.25rem,4vw,3.75rem)] font-medium tracking-tight text-[#0F1011]">
-              Why Leading Properties Trust Jalsarah.
+            <h2 className="text-[clamp(2.15rem,3.8vw,3.5rem)] font-medium tracking-tight text-brand-ink">
+              Why Leading Properties Trust Aquelis.
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {values.map((v, i) => (
               <Reveal key={i} direction="up" delayMs={i * 80}>
-                <div className="bg-white rounded-3xl p-8 shadow-sm border border-black/5 hover-lift h-full flex flex-col justify-between">
+                <div className="bg-brand-surface rounded-3xl p-6 sm:p-8 shadow-xs border border-brand-border hover-lift h-full flex flex-col justify-between">
                   <div>
                     <span className="text-3xl block mb-4">{v.icon}</span>
-                    <h3 className="text-[20px] font-bold text-[#0F1011] mb-2">{v.title}</h3>
-                    <p className="text-[14px] text-[#59595D] leading-relaxed">{v.desc}</p>
+                    <h3 className="text-[19px] sm:text-[20px] font-bold text-brand-ink mb-2">{v.title}</h3>
+                    <p className="text-[14px] text-brand-text-body leading-relaxed">{v.desc}</p>
                   </div>
                 </div>
               </Reveal>
@@ -203,11 +203,11 @@ export default function AboutPage() {
       </section>
 
       {/* Milestones Timeline */}
-      <section className="py-20 lg:py-24 bg-[#EBEBED]">
+      <section className="py-20 lg:py-24 bg-brand-subtle">
         <div className="section-container">
-          <div className="max-w-2xl mb-14">
+          <div className="max-w-2xl mb-12 sm:mb-14">
             <span className="eyebrow-badge">Our Journey</span>
-            <h2 className="text-[clamp(2.25rem,4vw,3.75rem)] font-medium tracking-tight text-[#0F1011]">
+            <h2 className="text-[clamp(2.15rem,3.8vw,3.5rem)] font-medium tracking-tight text-brand-ink">
               Over 25 Years of Milestones.
             </h2>
           </div>
@@ -215,10 +215,10 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {milestones.map((m, idx) => (
               <Reveal key={idx} direction="up" delayMs={idx * 80}>
-                <div className="bg-white rounded-3xl p-8 shadow-sm border border-black/5 h-full">
-                  <span className="text-[28px] font-bold text-[#1537EE] block mb-2">{m.year}</span>
-                  <h3 className="text-[18px] font-bold text-[#0F1011] mb-2">{m.title}</h3>
-                  <p className="text-[13px] text-[#59595D] leading-relaxed">{m.desc}</p>
+                <div className="bg-brand-surface rounded-3xl p-6 sm:p-8 shadow-xs border border-brand-border h-full">
+                  <span className="text-[26px] sm:text-[28px] font-bold text-brand-primary block mb-2">{m.year}</span>
+                  <h3 className="text-[17px] sm:text-[18px] font-bold text-brand-ink mb-2">{m.title}</h3>
+                  <p className="text-[13px] text-brand-text-body leading-relaxed">{m.desc}</p>
                 </div>
               </Reveal>
             ))}
@@ -230,12 +230,12 @@ export default function AboutPage() {
       <Team />
 
       {/* Bottom CTA */}
-      <section className="py-20 bg-[#DFDFE1] text-center">
+      <section className="py-20 bg-brand-surface border-t border-brand-border text-center">
         <div className="section-container">
-          <h2 className="text-[clamp(2.25rem,4.5vw,4rem)] font-medium text-[#0F1011] tracking-tight mb-6">
+          <h2 className="text-[clamp(2.15rem,4vw,3.75rem)] font-medium text-brand-ink tracking-tight mb-4 sm:mb-6">
             Ready to design or restore your pool?
           </h2>
-          <p className="text-[16px] text-[#59595D] max-w-xl mx-auto mb-8">
+          <p className="text-[15px] sm:text-[16px] text-brand-text-body max-w-xl mx-auto mb-8">
             Speak directly with our chief engineers and get an itemized estimate with 3D concepts.
           </p>
           <Link href="/contact" className="btn-pill-dark group">

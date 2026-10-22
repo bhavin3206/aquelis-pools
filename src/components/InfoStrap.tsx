@@ -2,20 +2,20 @@ import Reveal from "@/components/Reveal";
 
 export default function InfoStrap() {
   return (
-    <section className="py-14 bg-[#0F1011] border-y border-[#1D1E20] content-auto">
+    <section className="py-12 sm:py-14 bg-[#090A0C] border-y border-white/10 content-auto">
       <div className="section-container">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 items-stretch">
           {/* Item 1 */}
           <Reveal direction="up" delayMs={0}>
-            <div className="flex gap-5 items-start group">
-              <div className="w-16 h-16 rounded-2xl bg-white flex items-center justify-center flex-shrink-0 shadow-sm border border-black/5 group-hover:scale-105 group-hover:shadow-md transition-all">
-                <span className="text-[28px] font-bold text-[#F2FF59]">25</span>
+            <div className="flex gap-4 sm:gap-5 items-start group">
+              <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-brand-primary flex items-center justify-center flex-shrink-0 shadow-xs border border-white/10 group-hover:scale-105 transition-all">
+                <span className="text-[24px] sm:text-[28px] font-bold text-white">25</span>
               </div>
               <div>
-                <h3 className="text-[19px] font-medium text-white leading-snug mb-1">
+                <h3 className="text-[17px] sm:text-[19px] font-medium text-white leading-snug mb-1">
                   years of experience.
                 </h3>
-                <p className="text-[13px] text-[#8F9096] leading-relaxed">
+                <p className="text-[13px] text-[#8F94A0] leading-relaxed">
                   For over 25 years we have been offering only the best products and
                   services.
                 </p>
@@ -25,14 +25,14 @@ export default function InfoStrap() {
 
           {/* Item 2 */}
           <Reveal direction="up" delayMs={100}>
-            <div className="flex gap-5 items-start group">
-              <div className="w-16 h-16 rounded-2xl bg-white flex items-center justify-center flex-shrink-0 shadow-sm border border-black/5 group-hover:scale-105 group-hover:shadow-md transition-all">
+            <div className="flex gap-4 sm:gap-5 items-start group">
+              <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-white flex items-center justify-center flex-shrink-0 shadow-xs border border-white/10 group-hover:scale-105 transition-all">
                 <svg
-                  width="28"
-                  height="28"
+                  width="26"
+                  height="26"
                   viewBox="0 0 24 24"
                   fill="none"
-                  stroke="#1537EE"
+                  stroke="#0B2FC7"
                   strokeWidth="2"
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -41,10 +41,10 @@ export default function InfoStrap() {
                 </svg>
               </div>
               <div>
-                <h3 className="text-[19px] font-medium text-white leading-snug mb-1">
+                <h3 className="text-[17px] sm:text-[19px] font-medium text-white leading-snug mb-1">
                   Quality Products. Delivered by experts.
                 </h3>
-                <p className="text-[13px] text-[#8F9096] leading-relaxed">
+                <p className="text-[13px] text-[#8F94A0] leading-relaxed">
                   Your satisfaction is our priority. If you&apos;re not completely happy with
                   our service, we&apos;ll work.
                 </p>
@@ -54,14 +54,14 @@ export default function InfoStrap() {
 
           {/* Item 3 */}
           <Reveal direction="up" delayMs={200}>
-            <div className="flex gap-5 items-start group">
-              <div className="w-16 h-16 rounded-2xl bg-white flex items-center justify-center flex-shrink-0 shadow-sm border border-black/5 group-hover:scale-105 group-hover:shadow-md transition-all">
+            <div className="flex gap-4 sm:gap-5 items-start group">
+              <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-white flex items-center justify-center flex-shrink-0 shadow-xs border border-white/10 group-hover:scale-105 transition-all">
                 <svg
-                  width="28"
-                  height="28"
+                  width="26"
+                  height="26"
                   viewBox="0 0 24 24"
                   fill="none"
-                  stroke="#1537EE"
+                  stroke="#0B2FC7"
                   strokeWidth="2"
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -71,10 +71,10 @@ export default function InfoStrap() {
                 </svg>
               </div>
               <div>
-                <h3 className="text-[19px] font-medium text-white leading-snug mb-1">
+                <h3 className="text-[17px] sm:text-[19px] font-medium text-white leading-snug mb-1">
                   24/7 hours clients support.
                 </h3>
-                <p className="text-[13px] text-[#8F9096] leading-relaxed">
+                <p className="text-[13px] text-[#8F94A0] leading-relaxed">
                   We offer flexible service plans that can be tailored to your specific
                   preferences and pool.
                 </p>

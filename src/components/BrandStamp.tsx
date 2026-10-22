@@ -20,14 +20,14 @@ export default function BrandStamp({
       : variant === "glass-light"
       ? "fill-white/95"
       : variant === "glass-dark"
-      ? "fill-[#0F1011]/90"
-      : "fill-[#0F1011]";
+      ? "fill-[#090A0C]/90"
+      : "fill-[#090A0C]";
 
-  const outerRingStroke = isDark ? "#F2FF59" : "#1537EE";
-  const innerRingStroke = isDark ? "rgba(255,255,255,0.25)" : "rgba(15,16,17,0.2)";
-  const textColor = isDark ? "#FFFFFF" : "#0F1011";
-  const accentColor = isDark ? "#F2FF59" : "#1537EE";
-  const bannerBg = isDark ? "#1537EE" : "#0F1011";
+  const outerRingStroke = isDark ? "#38E1EC" : "#0B2FC7";
+  const innerRingStroke = isDark ? "rgba(255,255,255,0.25)" : "rgba(9,10,12,0.15)";
+  const textColor = isDark ? "#FFFFFF" : "#090A0C";
+  const accentColor = isDark ? "#38E1EC" : "#0B2FC7";
+  const bannerBg = isDark ? "#0B2FC7" : "#090A0C";
   const bannerTextColor = "#FFFFFF";
 
   return (

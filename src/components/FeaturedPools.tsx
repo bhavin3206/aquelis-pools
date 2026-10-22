@@ -75,7 +75,7 @@ export default function FeaturedPools() {
   const current = projectDetails[activeTab] || projectDetails["All"];
 
   return (
-    <section id="projects" className="py-24 bg-[#ECECED] content-auto">
+    <section id="projects" className="py-20 sm:py-24 bg-brand-subtle content-auto">
       <div className="section-container">
         {/* Header & Tabs */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
@@ -88,17 +88,17 @@ export default function FeaturedPools() {
             </h2>
           </Reveal>
 
-          {/* Filter Pills */}
+          {/* Filter Pills with mobile horizontal scroll */}
           <Reveal direction="up" delayMs={100}>
-            <div className="flex flex-wrap items-center gap-2">
+            <div className="flex items-center gap-2 overflow-x-auto no-scrollbar py-1 flex-nowrap sm:flex-wrap">
               {tabs.map((tab) => (
                 <button
                   key={tab}
                   onClick={() => setActiveTab(tab)}
-                  className={`px-5 py-2.5 rounded-full text-[14px] font-medium transition-all cursor-pointer ${
+                  className={`px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-[13px] sm:text-[14px] font-medium transition-all cursor-pointer whitespace-nowrap flex-shrink-0 ${
                     activeTab === tab
-                      ? "bg-[#0F1011] text-white shadow-sm scale-105"
-                      : "bg-white text-[#59595D] hover:text-[#0F1011] hover:bg-white/80"
+                      ? "bg-brand-ink text-white shadow-xs"
+                      : "bg-brand-surface text-brand-text-muted hover:text-brand-ink border border-brand-border hover:bg-brand-subtle"
                   }`}
                 >
                   {tab}
@@ -110,23 +110,23 @@ export default function FeaturedPools() {
 
         {/* Featured Project Showcase Card with Tab Fade Transition */}
         <Reveal direction="up" delayMs={150}>
-          <div className="bg-[#DFDFE1] rounded-3xl p-6 sm:p-10 lg:p-14 mb-16 shadow-sm">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          <div className="bg-brand-surface border border-brand-border rounded-3xl p-6 sm:p-10 lg:p-12 mb-16 shadow-xs">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
               {/* Left Info */}
-              <div className="lg:col-span-6 space-y-6 transition-opacity duration-300">
-                <div className="inline-block px-3 py-1 bg-white rounded-full text-xs font-bold text-[#1537EE]">
+              <div className="lg:col-span-6 space-y-5 transition-opacity duration-300">
+                <div className="inline-block px-3 py-1 bg-brand-primary-light rounded-full text-xs font-bold text-brand-primary">
                   Aque. Exclusive
                 </div>
-                <h3 className="text-[clamp(2rem,3.5vw,3.5rem)] font-medium text-[#0F1011] leading-tight tracking-tight">
+                <h3 className="text-[clamp(1.75rem,3.2vw,3.25rem)] font-medium text-brand-ink leading-tight tracking-tight">
                   {current.title}
                 </h3>
-                <div className="flex items-center gap-4 text-[#0F1011]">
-                  <span className="text-[26px] font-bold text-[#1537EE]">{current.price}</span>
-                  <span className="text-sm font-medium text-[#59595D]">
+                <div className="flex items-center gap-3 sm:gap-4 text-brand-ink">
+                  <span className="text-[22px] sm:text-[26px] font-bold text-brand-primary">{current.price}</span>
+                  <span className="text-xs sm:text-sm font-medium text-brand-text-muted">
                     • {current.location}
                   </span>
                 </div>
-                <p className="text-[15px] leading-relaxed text-[#59595D]">
+                <p className="text-[14px] sm:text-[15px] leading-relaxed text-brand-text-body">
                   We specialize in providing top-notch pool service and maintenance to
                   ensure your pool remains a safe, clean, and inviting space for
                   relaxation and recreation. Our certified technicians regularly test
@@ -143,9 +143,9 @@ export default function FeaturedPools() {
               </div>
 
               {/* Right Photo with Stamp */}
-              <div className="lg:col-span-6 relative">
+              <div className="lg:col-span-6 relative overflow-hidden sm:overflow-visible">
                 <div
-                  className="relative rounded-2xl overflow-hidden h-[340px] sm:h-[440px] shadow-sm group"
+                  className="relative rounded-2xl overflow-hidden aspect-[16/11] sm:h-[400px] shadow-sm group"
                   style={{ position: "relative" }}
                 >
                   <Image
@@ -157,8 +157,8 @@ export default function FeaturedPools() {
                     className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                   />
                 </div>
-                <div className="absolute -bottom-6 -right-6 w-28 h-28 animate-spin-slow hover:scale-110 transition-transform drop-shadow-xl z-10">
-                  <BrandStamp variant="solid-white" size={112} />
+                <div className="absolute -bottom-4 right-2 sm:-bottom-6 sm:-right-4 w-20 h-20 sm:w-28 sm:h-28 animate-spin-slow hover:scale-110 transition-transform drop-shadow-xl z-10">
+                  <BrandStamp variant="solid-white" size={100} />
                 </div>
               </div>
             </div>
@@ -166,34 +166,34 @@ export default function FeaturedPools() {
         </Reveal>
 
         {/* Company Statistics Row */}
-        <div className="border-t border-[#D5D5D8] pt-12">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="border-t border-brand-border pt-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
             <Reveal direction="up" delayMs={0}>
-              <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-black/5 hover-lift">
-                <span ref={stat1.ref} className="text-[clamp(2.5rem,4vw,3.5rem)] font-bold text-[#0F1011] block mb-2 leading-none">
+              <div className="bg-brand-surface rounded-2xl p-6 sm:p-8 shadow-xs border border-brand-border hover-lift">
+                <span ref={stat1.ref} className="text-[clamp(2.25rem,3.8vw,3.25rem)] font-bold text-brand-ink block mb-2 leading-none">
                   {stat1.display}
                 </span>
-                <span className="text-[14px] font-medium text-[#59595D]">
+                <span className="text-[14px] font-medium text-brand-text-muted">
                   Successfully Projects Complete
                 </span>
               </div>
             </Reveal>
             <Reveal direction="up" delayMs={100}>
-              <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-black/5 hover-lift">
-                <span ref={stat2.ref} className="text-[clamp(2.5rem,4vw,3.5rem)] font-bold text-[#0F1011] block mb-2 leading-none">
+              <div className="bg-brand-surface rounded-2xl p-6 sm:p-8 shadow-xs border border-brand-border hover-lift">
+                <span ref={stat2.ref} className="text-[clamp(2.25rem,3.8vw,3.25rem)] font-bold text-brand-ink block mb-2 leading-none">
                   {stat2.display}
                 </span>
-                <span className="text-[14px] font-medium text-[#59595D]">
+                <span className="text-[14px] font-medium text-brand-text-muted">
                   Expert Team Members
                 </span>
               </div>
             </Reveal>
             <Reveal direction="up" delayMs={200}>
-              <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-black/5 hover-lift">
-                <span ref={stat3.ref} className="text-[clamp(2.5rem,4vw,3.5rem)] font-bold text-[#0F1011] block mb-2 leading-none">
+              <div className="bg-brand-surface rounded-2xl p-6 sm:p-8 shadow-xs border border-brand-border hover-lift">
+                <span ref={stat3.ref} className="text-[clamp(2.25rem,3.8vw,3.25rem)] font-bold text-brand-ink block mb-2 leading-none">
                   {stat3.display}
                 </span>
-                <span className="text-[14px] font-medium text-[#59595D]">
+                <span className="text-[14px] font-medium text-brand-text-muted">
                   Our Satisfied Customers
                 </span>
               </div>

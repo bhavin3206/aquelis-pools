@@ -7,13 +7,13 @@ export default function BlogSection() {
   const posts = blogPosts.slice(0, 3);
 
   return (
-    <section id="blog" className="py-24 bg-[#EBEBED] content-auto">
+    <section id="blog" className="py-20 sm:py-24 bg-brand-bg content-auto">
       <div className="section-container">
         {/* Header */}
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-16">
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-12 sm:mb-16">
           <Reveal direction="up">
             <span className="eyebrow-badge">Blog Posts</span>
-            <h2 className="text-[clamp(2.5rem,5vw,5rem)] font-medium leading-[1.02] tracking-[-0.04em] text-[#0F1011]">
+            <h2 className="text-[clamp(2.15rem,4.5vw,4.5rem)] font-medium leading-[1.02] tracking-[-0.04em] text-brand-ink">
               Our Latest News
               <br />
               &amp; Updates.
@@ -21,7 +21,7 @@ export default function BlogSection() {
           </Reveal>
 
           <Reveal direction="up" delayMs={100}>
-            <Link href="/blog" className="btn-pill-dark group">
+            <Link href="/blog" className="btn-pill-dark group self-start sm:self-auto">
               <span>Read All Articles</span>
               <span className="arrow-circle group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform">
                 ↗
@@ -31,14 +31,14 @@ export default function BlogSection() {
         </div>
 
         {/* 3 Blog Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {posts.map((post, idx) => (
             <Reveal key={post.slug} direction="up" delayMs={idx * 120}>
               <Link href={`/blog/${post.slug}`} className="block h-full">
-                <article className="bg-white rounded-3xl p-5 flex flex-col justify-between group hover-lift cursor-pointer h-full border border-black/5 shadow-sm">
+                <article className="bg-brand-surface rounded-3xl p-5 flex flex-col justify-between group hover-lift cursor-pointer h-full border border-brand-border shadow-xs">
                   <div>
                     <div
-                      className="relative rounded-2xl overflow-hidden h-[240px] mb-5"
+                      className="relative rounded-2xl overflow-hidden aspect-[16/10] sm:h-[240px] mb-5"
                       style={{ position: "relative" }}
                     >
                       <Image
@@ -60,22 +60,22 @@ export default function BlogSection() {
                     </div>
 
                     <div className="space-y-3">
-                      <h3 className="text-[21px] font-medium text-[#0F1011] leading-snug tracking-tight group-hover:text-[#1537EE] transition-colors">
+                      <h3 className="text-[20px] sm:text-[21px] font-medium text-brand-ink leading-snug tracking-tight group-hover:text-brand-primary transition-colors">
                         {post.title}
                       </h3>
-                      <p className="text-[14px] text-[#59595D] leading-relaxed line-clamp-3">
+                      <p className="text-[14px] text-brand-text-body leading-relaxed line-clamp-3">
                         {post.excerpt}
                       </p>
                     </div>
                   </div>
 
-                  <div className="flex items-center justify-between pt-5 mt-5 border-t border-[#F0F0F2] text-[13px] text-[#8F9096]">
+                  <div className="flex items-center justify-between pt-4 mt-5 border-t border-brand-border text-[13px] text-brand-text-muted">
                     <span>{post.date}</span>
                     <div className="flex items-center gap-2">
-                      <div className="w-6 h-6 rounded-full bg-[#1537EE] text-white flex items-center justify-center text-[10px] font-bold">
+                      <div className="w-6 h-6 rounded-full bg-brand-primary text-white flex items-center justify-center text-[10px] font-bold">
                         {post.author.charAt(0)}
                       </div>
-                      <span className="font-medium text-[#0F1011] group-hover:text-[#1537EE] transition-colors">
+                      <span className="font-medium text-brand-ink group-hover:text-brand-primary transition-colors">
                         {post.author}
                       </span>
                     </div>

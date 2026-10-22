@@ -48,21 +48,21 @@ function StarRow() {
 
 export default function Testimonials() {
   return (
-    <section className="py-24 bg-[#F3F3F5] content-auto">
+    <section className="py-20 sm:py-24 bg-brand-bg content-auto">
       <div className="section-container">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
           {/* Left Text */}
-          <div className="lg:col-span-4 space-y-6 lg:sticky lg:top-28">
+          <div className="lg:col-span-4 space-y-5 lg:sticky lg:top-28">
             <Reveal direction="up">
               <span className="eyebrow-badge">Testimonials.</span>
-              <h2 className="text-[clamp(2.5rem,4.5vw,4.5rem)] font-medium leading-[1.02] tracking-[-0.04em] text-[#0F1011]">
+              <h2 className="text-[clamp(2.15rem,4vw,4.25rem)] font-medium leading-[1.02] tracking-[-0.04em] text-brand-ink">
                 Our Clients
                 <br />
                 Feedback.
               </h2>
             </Reveal>
             <Reveal direction="up" delayMs={100}>
-              <p className="text-[15px] leading-relaxed text-[#59595D]">
+              <p className="text-[15px] leading-relaxed text-brand-text-body">
                 We specialize in providing top-notch pool service and maintenance to
                 ensure your pool remains a safe, clean, and inviting space for
                 relaxation and recreation.
@@ -84,15 +84,15 @@ export default function Testimonials() {
           <div className="lg:col-span-8 space-y-6">
             {testimonials.map((t, idx) => (
               <Reveal key={idx} direction="left" delayMs={idx * 100}>
-                <div className="bg-[#E7E7E9] rounded-3xl p-8 sm:p-10 space-y-4 shadow-sm border border-black/5 hover-lift">
+                <div className="bg-brand-surface rounded-3xl p-6 sm:p-8 lg:p-10 space-y-4 shadow-xs border border-brand-border hover-lift">
                   <StarRow />
-                  <h3 className="text-[20px] font-semibold text-[#0F1011]">{t.headline}</h3>
-                  <blockquote className="text-[clamp(1rem,1.5vw,1.25rem)] font-normal text-[#0F1011] leading-snug tracking-tight">
+                  <h3 className="text-[19px] sm:text-[20px] font-semibold text-brand-ink">{t.headline}</h3>
+                  <blockquote className="text-[clamp(1rem,1.4vw,1.25rem)] font-normal text-brand-text-body leading-relaxed tracking-tight">
                     &ldquo;{t.quote}&rdquo;
                   </blockquote>
-                  <div className="flex items-center gap-4 pt-2 border-t border-[#D5D5D8]">
+                  <div className="flex items-center gap-4 pt-3 border-t border-brand-border">
                     <div
-                      className="relative w-12 h-12 rounded-full overflow-hidden flex-shrink-0 border-2 border-white shadow-sm"
+                      className="relative w-12 h-12 rounded-full overflow-hidden flex-shrink-0 border-2 border-brand-primary-light shadow-xs"
                       style={{ position: "relative" }}
                     >
                       <Image
@@ -104,8 +104,8 @@ export default function Testimonials() {
                       />
                     </div>
                     <div>
-                      <h4 className="text-[15px] font-bold text-[#0F1011]">{t.name}</h4>
-                      <p className="text-[12px] text-[#59595D]">{t.role}</p>
+                      <h4 className="text-[15px] font-bold text-brand-ink">{t.name}</h4>
+                      <p className="text-[12px] text-brand-text-muted">{t.role}</p>
                     </div>
                   </div>
                 </div>

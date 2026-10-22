@@ -21,44 +21,44 @@ export default function BlogPage() {
       : articles.filter((a) => a.category === activeCategory);
 
   return (
-    <main className="min-h-screen bg-[#F3F3F5] text-[#0F1011] overflow-x-hidden">
+    <main className="min-h-screen bg-brand-bg text-brand-text-body overflow-x-hidden">
       <Navbar />
 
       {/* Header Banner */}
-      <section className="pt-10 pb-12 border-b border-[#D8D8DA]">
+      <section className="pt-8 sm:pt-12 pb-10 sm:pb-14 border-b border-brand-border bg-brand-bg">
         <div className="section-container">
           {/* Breadcrumb */}
-          <div className="mb-6 flex items-center gap-2 text-sm">
-            <Link href="/" className="text-[#8F9096] hover:text-[#0F1011] transition-colors font-semibold">
+          <div className="mb-6 flex items-center gap-2 text-xs sm:text-sm">
+            <Link href="/" className="text-brand-text-muted hover:text-brand-text-primary transition-colors font-semibold">
               Home
             </Link>
-            <span className="text-[#8F9096]">&gt;</span>
-            <span className="font-semibold text-[#0F1011]">Articles &amp; News.</span>
+            <span className="text-brand-text-muted">&gt;</span>
+            <span className="font-semibold text-brand-text-primary">Articles &amp; News.</span>
           </div>
 
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
+          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
             <div className="max-w-3xl">
               <span className="eyebrow-badge">Industry Insights</span>
-              <h1 className="text-[clamp(2.5rem,5vw,5rem)] font-medium leading-[1.02] tracking-[-0.04em] text-[#0F1011] mb-4">
+              <h1 className="text-[clamp(2.25rem,5vw,4.5rem)] font-medium leading-[1.05] tracking-[-0.03em] text-brand-text-primary mb-4">
                 Our Latest News{" "}
-                <span className="text-[#8F9096] italic font-normal">&amp; Updates</span>.
+                <span className="text-brand-text-muted italic font-normal">&amp; Updates</span>.
               </h1>
-              <p className="text-[17px] text-[#59595D] leading-relaxed">
+              <p className="text-[15px] sm:text-[17px] text-brand-text-body leading-relaxed">
                 Expert tips, maintenance breakdowns, water balancing chemistry, and
-                architectural design inspiration written by Jalsarah’s certified engineers.
+                architectural design inspiration written by Aquelis certified engineers.
               </p>
             </div>
 
-            {/* Category filters */}
-            <div className="flex flex-wrap items-center gap-2">
+            {/* Category filters - horizontally scrollable on mobile */}
+            <div className="flex items-center gap-2 overflow-x-auto no-scrollbar pb-1 max-w-full">
               {categories.map((c) => (
                 <button
                   key={c}
                   onClick={() => setActiveCategory(c)}
-                  className={`px-4 py-2 rounded-full text-[13px] font-medium transition-all cursor-pointer ${
+                  className={`px-4 py-2 rounded-full text-[13px] font-medium transition-all shrink-0 cursor-pointer ${
                     activeCategory === c
-                      ? "bg-[#0F1011] text-white shadow-md scale-105"
-                      : "bg-white text-[#59595D] hover:text-[#0F1011] border border-black/5"
+                      ? "bg-brand-primary text-white shadow-sm font-semibold"
+                      : "bg-brand-surface text-brand-text-body hover:bg-brand-subtle hover:text-brand-text-primary border border-brand-border"
                   }`}
                 >
                   {c}
@@ -70,15 +70,15 @@ export default function BlogPage() {
       </section>
 
       {/* Articles Grid */}
-      <section className="py-24 bg-[#ECECED]">
+      <section className="py-14 sm:py-20 bg-brand-subtle">
         <div className="section-container">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {filtered.map((post, idx) => (
-              <Reveal key={post.id} direction="up" delayMs={idx * 80}>
+              <Reveal key={post.id} direction="up" delayMs={idx * 60}>
                 <Link href={`/blog/${post.slug}`} className="block h-full">
-                  <article className="bg-white rounded-3xl p-6 shadow-sm border border-black/5 hover-lift flex flex-col justify-between h-full group cursor-pointer">
+                  <article className="bg-brand-surface rounded-3xl p-6 shadow-sm border border-brand-border hover-lift flex flex-col justify-between h-full group cursor-pointer">
                     <div>
-                      <div className="relative rounded-2xl overflow-hidden h-[250px] mb-6" style={{ position: "relative" }}>
+                      <div className="relative rounded-2xl overflow-hidden h-[220px] sm:h-[250px] mb-6" style={{ position: "relative" }}>
                         <Image
                           src={post.image}
                           alt={post.title}
@@ -87,26 +87,26 @@ export default function BlogPage() {
                           className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                         />
                         <div className="absolute top-4 left-4 flex items-center gap-2">
-                          <span className="bg-black/80 backdrop-blur-md text-white text-xs px-3 py-1 rounded-full font-medium">
+                          <span className="bg-brand-text-primary/80 backdrop-blur-md text-white text-xs px-3 py-1 rounded-full font-medium">
                             {post.time}
                           </span>
-                          <span className="bg-white/90 backdrop-blur-md text-[#0F1011] text-xs px-3 py-1 rounded-full font-bold">
+                          <span className="bg-brand-surface/90 backdrop-blur-md text-brand-text-primary text-xs px-3 py-1 rounded-full font-bold border border-brand-border/60">
                             {post.category}
                           </span>
                         </div>
                       </div>
 
-                      <h2 className="text-[22px] font-bold text-[#0F1011] leading-snug tracking-tight mb-3 group-hover:text-[#1537EE] transition-colors">
+                      <h2 className="text-[20px] sm:text-[22px] font-bold text-brand-text-primary leading-snug tracking-tight mb-3 group-hover:text-brand-primary transition-colors">
                         {post.title}
                       </h2>
-                      <p className="text-[14px] text-[#59595D] leading-relaxed line-clamp-3 mb-6">
+                      <p className="text-[14px] text-brand-text-body leading-relaxed line-clamp-3 mb-6">
                         {post.excerpt}
                       </p>
                     </div>
 
-                    <div className="pt-5 border-t border-[#F0F0F2] flex items-center justify-between text-xs text-[#8F9096]">
+                    <div className="pt-5 border-t border-brand-border flex items-center justify-between text-xs text-brand-text-muted">
                       <span>{post.date}</span>
-                      <span className="font-bold text-[#0F1011] group-hover:text-[#1537EE] transition-colors flex items-center gap-1">
+                      <span className="font-bold text-brand-text-primary group-hover:text-brand-primary transition-colors flex items-center gap-1">
                         By {post.author} ↗
                       </span>
                     </div>
@@ -119,13 +119,13 @@ export default function BlogPage() {
       </section>
 
       {/* Newsletter Signup Banner */}
-      <section className="py-20 bg-white border-t border-[#D8D8DA]">
+      <section className="py-16 sm:py-20 bg-brand-surface border-t border-brand-border">
         <div className="section-container max-w-3xl mx-auto text-center">
           <span className="eyebrow-badge">Monthly Pool Journal</span>
-          <h2 className="text-[clamp(2.25rem,4vw,3.5rem)] font-medium text-[#0F1011] tracking-tight mb-4">
+          <h2 className="text-[clamp(2rem,4vw,3.5rem)] font-medium text-brand-text-primary tracking-tight mb-4">
             Stay ahead on seasonal pool care.
           </h2>
-          <p className="text-[16px] text-[#59595D] mb-8">
+          <p className="text-[15px] sm:text-[16px] text-brand-text-body mb-8">
             Receive monthly water balancing reminders, winterization checklists, and private client discounts.
           </p>
 
@@ -137,12 +137,13 @@ export default function BlogPage() {
             className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto"
           >
             <input
+              suppressHydrationWarning
               type="email"
               required
               placeholder="Enter your email address"
-              className="flex-1 bg-[#F3F3F5] border border-[#D0D0D2] rounded-full px-5 py-3.5 text-sm text-[#0F1011] focus:outline-none focus:ring-2 focus:ring-[#1537EE]"
+              className="flex-1 bg-brand-bg border border-brand-border rounded-full px-5 py-3.5 text-base sm:text-sm text-brand-text-primary placeholder:text-brand-text-muted focus:outline-none focus:ring-2 focus:ring-brand-primary"
             />
-            <button type="submit" className="btn-pill-dark !py-3 !px-6 text-sm flex-shrink-0">
+            <button type="submit" className="btn-pill-dark !py-3 !px-6 text-sm flex-shrink-0 cursor-pointer">
               Subscribe
             </button>
           </form>
